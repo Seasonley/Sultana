@@ -112,3 +112,38 @@
   border-bottom: 2px solid var(--Primary); 
   margin-left :-1.1em;
 }
+input[type="range"][su~="star"]{
+  width: calc(16px * 5);
+  height: 16px;
+  -webkit-appearance: none;
+  background:
+    linear-gradient(to right,var(--Primary),var(--Primary)),
+    linear-gradient(to right,var(--Gray),var(--Gray))
+  ;
+  background-repeat: no-repeat;
+  -webkit-mask-image: url(star.svg);
+}
+input[type="range"][su~="star"][value="1"]{
+  background-size: calc(16px * 1) 16px,calc(16px * 5) 16px;
+}
+input[type="range"][su~="star"][value="2"]{
+  background-size: calc(16px * 2) 16px,calc(16px * 5) 16px;
+}
+input[type="range"][su~="star"][value="3"]{
+  background-size: calc(16px * 3) 16px,calc(16px * 5) 16px;
+}
+input[type="range"][su~="star"][value="4"]{
+  background-size: calc(16px * 4) 16px,calc(16px * 5) 16px;
+}
+input[type="range"][su~="star"][value="5"]{
+  background-size: calc(16px * 5) 16px,calc(16px * 5) 16px;
+}
+
+::-webkit-slider-runnable-track {
+
+}
+::-webkit-slider-thumb {
+  opacity: 0;
+}
+
+
