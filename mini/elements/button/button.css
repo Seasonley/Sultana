@@ -1,5 +1,5 @@
 @import url(../../common/color.css);
-[su-btn] {
+button[su] {
     opacity: 0.99;
     line-height: 1rem;
     padding:  0.5rem 1rem;
@@ -10,13 +10,13 @@
     text-decoration: none;
     position: relative;
     border-radius:2px;
-    box-shadow:0 1px 3px darkgray;
+    box-shadow:0 1px 3px var(--Gray);
     transition: box-shadow 0.5s ease-out;
     cursor: pointer;
     box-sizing: border-box;
     line-height: 1em;
 }
-[su-btn]::before{
+button[su]::before{
   content: '';
 display:block;
   position: absolute;
@@ -31,75 +31,47 @@ display:block;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
   transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
 }
-[su-btn]:hover{
-box-shadow:0 6px 16px darkgray;
+button[su]:hover{
+box-shadow:0 6px 16px var(--Gray);
   transition: all 0.8s ease-out;
 }
-[su-btn]:active{
+button[su]:active{
 opacity: 1;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.3s ease-out;
 }
-[su-btn]:active::before{
+button[su]:active::before{
   width: 0;
   height: 100%;
   border-radius: 0;
-  background-color: rgba(0,0,0,.4);
+  background-color: var(--Shadow);
   -webkit-transition: all 0.01s ease-out;
   transition: all 0.01s ease-out;
 }
 
-[su-btn][disabled]{
-background-color:lightgray;
-color:darkgray;
+button[su][disabled]{
+background-color:var(--Light);
+color:var(--Gray);
 cursor:not-allowed;
 box-shadow: none;
 }
-[su-btn~= "primary"]{
-  background-color:var(--Primary);
-  color:var(--Primary_i);
-}
-[su-btn~="link"]{
-  background-color:var(--Link);
-  color:var(--Link_i);
-}
-[su-btn~="light"]{
-  background-color:var(--Light);
-  color:var(--Light_i);
-}
-[su-btn~="info"]{
-  background-color:var(--Info);
-  color:var(--Info_i);
-}
-[su-btn~="success"]{
-  background-color:var(--Success);
-  color:var(--Success_i);
-}
-[su-btn~="warning"]{
-  background-color:var(--Warning);
-  color:var(--Warning_i);
-}
-[su-btn~="danger"]{
-  background-color:var(--Danger);
-  color:var(--Danger_i);
-}
 
 
-[su-btn~="small"]{
+button[su~="small"]{
   font-size: 0.5em;
 }
-[su-btn~="medium"]{
+button[su~="medium"]{
   font-size: 1.5em;
 }
-[su-btn~="large"]{
+button[su~="large"]{
   font-size: 2em;
 }
-[su-btn~="outlined"]{
+button[su~="outlined"]{
   border: 1px solid var(--Primary);
   background-color:var(--Primary_i);
   color:var(--Primary);
 }
 
-[su-btn~="rounded"]{
+button[su~="rounded"]{
   border-radius: 32px;
 }
