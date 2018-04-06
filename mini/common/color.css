@@ -1,0 +1,22 @@
+body {
+    --White: #fff;
+    --White_i: hsl(0, 0%, 4%);
+    --Black:hsl(0, 0%, 4%);
+    --Black_i:#fff;
+    --Light:hsl(0, 0%, 96%);
+    --Light_i:hsl(0, 0%, 21%);
+    --Dark:hsl(0, 0%, 21%);
+    --Dark_i:hsl(0, 0%, 96%);
+    --Primary:teal;
+    --Primary_i:#fff;
+    --Link:hsl(217, 71%, 53%);
+    --Link_i:#fff;
+    --Info:hsl(204, 86%, 53%);
+    --Info_i:#fff;
+    --Success:hsl(141, 71%, 48%);
+    --Success_i:#fff;
+    --Warning:hsl(48, 100%, 67%);
+    --Warning_i:rgba(0, 0, 0, 0.7);
+    --Danger:hsl(348, 100%, 61%);
+    --Danger_i:#fff;
+}
