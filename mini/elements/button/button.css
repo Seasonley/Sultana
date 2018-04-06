@@ -1,0 +1,105 @@
+@import url(../../common/color.css);
+[su-btn] {
+    opacity: 0.99;
+    line-height: 1rem;
+    padding:  0.5rem 1rem;
+    border: none;
+    outline: none;
+    background-color: var(--Primary);
+    color: var(--Primary_i);
+    text-decoration: none;
+    position: relative;
+    border-radius:2px;
+    box-shadow:0 1px 3px darkgray;
+    transition: box-shadow 0.5s ease-out;
+    cursor: pointer;
+    box-sizing: border-box;
+    line-height: 1em;
+}
+[su-btn]::before{
+  content: '';
+display:block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 10%/40%;
+  -webkit-transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%) ;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
+  transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
+}
+[su-btn]:hover{
+box-shadow:0 6px 16px darkgray;
+  transition: all 0.8s ease-out;
+}
+[su-btn]:active{
+opacity: 1;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
+}
+[su-btn]:active::before{
+  width: 0;
+  height: 100%;
+  border-radius: 0;
+  background-color: rgba(0,0,0,.4);
+  -webkit-transition: all 0.01s ease-out;
+  transition: all 0.01s ease-out;
+}
+
+[su-btn][disabled]{
+background-color:lightgray;
+color:darkgray;
+cursor:not-allowed;
+box-shadow: none;
+}
+[su-btn~= "primary"]{
+  background-color:var(--Primary);
+  color:var(--Primary_i);
+}
+[su-btn~="link"]{
+  background-color:var(--Link);
+  color:var(--Link_i);
+}
+[su-btn~="light"]{
+  background-color:var(--Light);
+  color:var(--Light_i);
+}
+[su-btn~="info"]{
+  background-color:var(--Info);
+  color:var(--Info_i);
+}
+[su-btn~="success"]{
+  background-color:var(--Success);
+  color:var(--Success_i);
+}
+[su-btn~="warning"]{
+  background-color:var(--Warning);
+  color:var(--Warning_i);
+}
+[su-btn~="danger"]{
+  background-color:var(--Danger);
+  color:var(--Danger_i);
+}
+
+
+[su-btn~="small"]{
+  font-size: 0.5em;
+}
+[su-btn~="medium"]{
+  font-size: 1.5em;
+}
+[su-btn~="large"]{
+  font-size: 2em;
+}
+[su-btn~="outlined"]{
+  border: 1px solid var(--Primary);
+  background-color:var(--Primary_i);
+  color:var(--Primary);
+}
+
+[su-btn~="rounded"]{
+  border-radius: 32px;
+}
