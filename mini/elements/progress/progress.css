@@ -1,0 +1,46 @@
+@import url(../../common/color.css);
+progress[su] {
+    display: inline-block;
+    width: 160px;
+    height: 10px;
+    border: 0;  
+    background-color:var(--White);
+    color: var(--Primary);
+    border-radius: 32px;
+    overflow: hidden;
+}
+progress[su]::-webkit-progress-bar { 
+    background:var(--Gray); 
+}
+progress[su]::-webkit-progress-value  { 
+    background: var(--Primary);
+    border-radius: 32px;
+}
+progress[su]:before{
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-animation: 2.4s cubic-bezier(.23,1,.32,1) infinite ant-progress-active;
+    animation: 2.4s cubic-bezier(.23,1,.32,1) infinite ant-progress-active;
+}
+progress[su~="star"]{
+    background:var(-Noclr);
+    background-repeat: no-repeat;
+    height: 32px;
+    border-radius: 0;
+}
+progress[su~="star"]::-webkit-progress-bar {
+    border-radius: 0;
+    -webkit-mask-image: url(star.svg)
+}
+progress[su~="star"]::-webkit-progress-value  {
+    border-radius: 0;
+}
