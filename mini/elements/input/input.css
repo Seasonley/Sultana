@@ -1,8 +1,8 @@
 @import url(../../common/color.css);
-input[type=checkbox],input[type=radio]{
+[su-ck],[su-rd]{
   display: none;
 }
-input[type=checkbox]+span,input[type=radio]+span{    
+[su-ck]+span,[su-rd]+span{    
   line-height: 1em;
   text-indent: 1.2em;
   width: 1em;
@@ -14,18 +14,16 @@ input[type=checkbox]+span,input[type=radio]+span{
   display: inline-block;
   position: relative;
   cursor: pointer;
-  white-space: nowrap;
-
 }
-input[type=radio]+span{
+[su-rd]+span{
   border-radius: 1em;
 }
-input[type=checkbox]:checked+span,input[type=radio]:checked+span{
+[su-ck]:checked+span,[su-rd]:checked+span{
   border-color:  var(--Primary);
 }
 
 
-input[type=checkbox]:checked + span:after{
+[su-ck]:checked + span:after{
   content: '';
   display: block;
   width: 0.7em;
@@ -40,12 +38,12 @@ input[type=checkbox]:checked + span:after{
   border-left: 0.15em solid rgb(238,238,238);
   border-bottom: 0.15em solid rgb(238,238,238);
 }
-input[type=radio]:checked + span{
+[su-rd]:checked + span{
   background:var(--Primary);
   box-shadow: 0 0 0 3px rgb(238,238,238) inset;
 }
 
-input[type=checkbox] + span:before,input[type=radio] + span:before{
+[su-ck] + span:before,[su-rd] + span:before{
     content: '';
   display:block;
     position: absolute;
@@ -62,7 +60,7 @@ input[type=checkbox] + span:before,input[type=radio] + span:before{
 
 }
 
-input[type=checkbox]+ span:active::before,input[type=radio]+ span:active::before{
+[su-ck]+ span:active::before,[su-rd]+ span:active::before{
     width: 0;
     height: 0;
     border-radius: 100%;
@@ -70,38 +68,38 @@ input[type=checkbox]+ span:active::before,input[type=radio]+ span:active::before
     -webkit-transition: all 0.01s ease-out;
     transition: all 0.01s ease-out;
 }
-input[type=checkbox]:checked+ span:active::before,input[type=radio]:checked+ span:active::before{
+[su-ck]:checked+ span:active::before,[su-rd]:checked+ span:active::before{
     background-color: gray;
 }
 
 
-input[type=checkbox]:checked + span,input[type=radio]:checked + span {
+[su-ck]:checked + span,[su-rd]:checked + span {
   background-color:var(--Primary);
   color: var(--Primary);
 }
 
-input[type=checkbox] + span:active, input[type=checkbox]:checked + span:active,input[type=radio] + span:active, input[type=radio]:checked + span:active {
+[su-ck] + span:active, [su-ck]:checked + span:active,[su-rd] + span:active, [su-rd]:checked + span:active {
   background-color:  var(--Primary);
 }
-input[type=checkbox]:disabled + span, input[type=radio]:disabled + span{
-    border-color:lightgray;color:lightgray;background-color: lightgray;pointer-events: none;
+[su-ck]:disabled + span, [su-rd]:disabled + span{
+   border-color:lightgray;color:lightgray;background-color: lightgray;pointer-events: none;
 }
 
 
-input[type=checkbox].switch+span{
+[su-ck].switch+span{
   left :0;
   border-radius: 1em;
   border-color:gray;
 }
-input[type=checkbox]:checked.switch+span{
+[su-ck]:checked.switch+span{
   left:1.5em;
   border-color:var(--Primary); 
 }
-input[type=checkbox].switch+span:after{
-    content: "";
-    position: absolute;
-    display: block;
-    margin-top: 50%;
+[su-ck].switch+span:after{
+   content: "";
+   position: absolute;
+   display: block;
+   margin-top: 50%;
   border-bottom: 2px solid lightgray;
   width: 1.4em;
   height: 0;
@@ -110,7 +108,7 @@ input[type=checkbox].switch+span:after{
   -webkit-transform:rotate(0deg);
   margin-left :1.1em;
 }
-input[type=checkbox]:checked.switch+span:after{
+[su-ck]:checked.switch+span:after{
   border-bottom: 2px solid var(--Primary); 
   margin-left :-1.1em;
 }
