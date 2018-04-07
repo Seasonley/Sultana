@@ -1,0 +1,184 @@
+@import url(../../common/color.css);
+@import url(../../common/icon.css);
+summary[disabled]{
+    pointer-events: none;
+}
+::-webkit-details-marker {
+    display: none;
+}
+::-moz-list-bullet {
+    font-size: 0;
+    float: left;
+}
+/* panel */
+details[su~="panel"] summary {
+    padding: 5px;
+    outline: 0;
+}
+details[su~="panel"] content {
+    display: block;
+    padding: 5px;
+}
+details[su~="panel"] summary::after {
+    content: '';
+    position: absolute;
+    width: 1em; height: 1em;
+    margin: .2em 0 0 .5ch;
+    background: var(--arrow-on) no-repeat;
+    background-size: 100% 100%;
+    transition: transform .2s;
+}
+details[su~="panel"]:not([open]) summary::after {
+    margin-top: .25em;
+    transform: rotate(90deg);    
+}
+details[su~="panel"] ::-webkit-details-marker {
+    display: none;
+}
+details[su~="panel"] ::-moz-list-bullet {
+    font-size: 0;
+}
+
+/* menu */
+aside[su~="|"] p{
+    color: var(--Gray);
+    font-size: 0.75em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+aside[su~="|"] summary{
+    border-radius: 2px;
+    color: #4a4a4a;
+    display: block;
+    padding: 0.5em 0.75em;
+    cursor: pointer;
+    user-select: none;
+    outline: 0;
+    cursor: pointer;
+}
+aside[su~="|"] summary:hover,aside[su~="|"] details:hover summary {
+    background-color: whitesmoke;
+    color: #363636;
+}
+aside[su~="|"] details[open] summary {
+    background-color: var(--Primary);
+    color: var(--Primary_i);
+    border-radius: 4px;
+}
+aside[su~="|"] details + ul {
+    max-height: 0;
+    transition: all .1s;
+    overflow: hidden;
+    border-left: 1px solid #dbdbdb;
+    margin:0;
+    padding-left: 0.75em;
+    list-style-type: none;
+}
+aside[su~="|"] details[open] + ul {
+    max-height: 1000px;
+    margin:0.75em;
+}
+
+/* tree */
+aside[su~="+"] details,aside[su~="v"] details {
+    padding-left: 20px;
+}
+aside[su~="+"] summary,aside[su~="v"] summary{
+    cursor: pointer;
+    outline: 0;
+}
+aside[su~="+"] summary::before {
+    content: '';
+    display: inline-block;
+    width: 12px; height: 12px;
+    border: 1px solid var(--Gray);
+    background: linear-gradient(to right, var(--Gray), var(--Gray)) no-repeat center, linear-gradient(to top, var(--Gray), var(--Gray)) no-repeat center;
+    background-size: 2px 10px, 10px 2px;
+    vertical-align: -2px;
+    margin-right: 6px;
+    margin-left: -20px;
+}
+aside[su~="+"] details[open] > summary::before {
+    background: linear-gradient(to right, var(--Gray), var(--Gray)) no-repeat center;
+    background-size: 10px 2px;
+}
+aside[su~="+"] summary[disabled]::before,aside[su~="v"] summary[disabled]::before {
+    border:0;
+    background: var(--Noclr);
+}
+aside[su~="v"] summary::before{
+    content: '';
+    border:0;
+    position: absolute;
+    width: 1em; height: 1em;
+    margin: .2em 0 0 -2ch;
+    background: var(--arrow-on) no-repeat;
+    background-size: 70% 70%;
+    transition: transform .1s;
+    transform: rotate(90deg);  
+}
+aside[su~="v"] details[open] > summary::before{
+    margin-top: 0;
+    transform: rotate(180deg);    
+}
+aside[su~="v"] details summary[title$=".pdf"]:before {
+    content:'';
+    width: 1em;
+    height:1.5ch;
+    display: inline-block;
+    background-image: url(../../common/svg/pdf.svg);
+    background-repeat: no-repeat;
+    transform: rotate(0deg);  
+}
+
+/* nav */
+nav[su~="-"] details{
+    float: left;
+}
+nav[su~="-"] summary {
+    display: inline-block;
+    padding: 5px 28px;
+    text-indent: -15px;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+}
+nav[su~="-"] summary::after {
+    content: '';
+    position: absolute;
+    width: 12px; height: 12px;
+    margin: 4px 0 0 .5ch;
+    background: var(--arrow-on) no-repeat;
+    background-size: 100% 100%;
+    transition: transform .2s;
+}
+nav[su~="-"] details[open] summary,
+nav[su~="-"] summary:hover {
+    background-color: #fff;
+    box-shadow: inset 1px 0 #ddd, inset -1px 0 #ddd;
+}
+nav[su~="-"] details[open] summary::after {
+    transform: rotate(180deg);
+}
+nav[su~="-"] .box {
+    position: absolute;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    min-width: 100px;
+    padding: 5px 0;
+    margin-top: -1px;
+}
+nav[su~="-"] .box a {
+    display: block;
+    padding: 5px 10px;
+    color: inherit;
+}
+nav[su~="-"] .box a:hover {
+    background-color: #f0f0f0;
+}
+nav[su~="-"] .box sup {
+    position: absolute;
+    color: #cd0000;
+    font-size: 12px;
+    margin-top: -.25em;
+}
