@@ -1,12 +1,12 @@
 @import url(../../common/color.css);
 @import url(../../common/icon.css);
-[su-ck],
-[su-rd] {
+input[su][type="checkbox"],
+input[su][type="radio"] {
     display: none;
 }
 
-[su-ck]+span,
-[su-rd]+span {
+input[su][type="checkbox"]+span,
+input[su][type="radio"]+span {
     line-height: 1em;
     text-indent: 1.2em;
     width: 1em;
@@ -20,16 +20,16 @@
     cursor: pointer;
 }
 
-[su-rd]+span {
+input[su][type="radio"]+span {
     border-radius: 1em;
 }
 
-[su-ck]:checked+span,
-[su-rd]:checked+span {
+input[su][type="checkbox"]:checked+span,
+input[su][type="radio"]:checked+span {
     border-color: var(--Primary);
 }
 
-[su-ck]:checked+span:after {
+input[su][type="checkbox"]:checked+span:after {
     content: '';
     display: block;
     width: 0.7em;
@@ -45,13 +45,13 @@
     border-bottom: 0.15em solid rgb(238, 238, 238);
 }
 
-[su-rd]:checked+span {
+input[su][type="radio"]:checked+span {
     background: var(--Primary);
     box-shadow: 0 0 0 3px rgb(238, 238, 238) inset;
 }
 
-[su-ck]+span:before,
-[su-rd]+span:before {
+input[su][type="checkbox"]+span:before,
+input[su][type="radio"]+span:before {
     content: '';
     display: block;
     position: absolute;
@@ -67,8 +67,8 @@
     transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
 }
 
-[su-ck]+span:active::before,
-[su-rd]+span:active::before {
+input[su][type="checkbox"]+span:active::before,
+input[su][type="radio"]+span:active::before {
     width: 0;
     height: 0;
     border-radius: 100%;
@@ -77,44 +77,44 @@
     transition: all 0.01s ease-out;
 }
 
-[su-ck]:checked+span:active::before,
-[su-rd]:checked+span:active::before {
+input[su][type="checkbox"]:checked+span:active::before,
+input[su][type="radio"]:checked+span:active::before {
     background-color: gray;
 }
 
-[su-ck]:checked+span,
-[su-rd]:checked+span {
+input[su][type="checkbox"]:checked+span,
+input[su][type="radio"]:checked+span {
     background-color: var(--Primary);
     color: var(--Primary);
 }
 
-[su-ck]+span:active,
-[su-ck]:checked+span:active,
-[su-rd]+span:active,
-[su-rd]:checked+span:active {
+input[su][type="checkbox"]+span:active,
+input[su][type="checkbox"]:checked+span:active,
+input[su][type="radio"]+span:active,
+input[su][type="radio"]:checked+span:active {
     background-color: var(--Primary);
 }
 
-[su-ck]:disabled+span,
-[su-rd]:disabled+span {
+input[su][type="checkbox"]:disabled+span,
+input[su][type="radio"]:disabled+span {
     border-color: lightgray;
     color: lightgray;
     background-color: lightgray;
     pointer-events: none;
 }
 
-[su-ck].switch+span {
+input[su="switch"][type="checkbox"]+span {
     left: 0;
     border-radius: 1em;
     border-color: gray;
 }
 
-[su-ck]:checked.switch+span {
+input[su="switch"][type="checkbox"]:checked+span {
     left: 1.5em;
     border-color: var(--Primary);
 }
 
-[su-ck].switch+span:after {
+input[su="switch"][type="checkbox"]+span:after {
     content: "";
     position: absolute;
     display: block;
@@ -128,9 +128,13 @@
     margin-left: 1.1em;
 }
 
-[su-ck]:checked.switch+span:after {
+input[su="switch"][type="checkbox"]:checked+span:after {
     border-bottom: 2px solid var(--Primary);
     margin-left: -1.1em;
+    transform: none;
+    width: 1.4em;
+    height: 0;
+    margin: 8px 0 0 -17.6px;
 }
 
 input[type="range"][su~="star"] {
