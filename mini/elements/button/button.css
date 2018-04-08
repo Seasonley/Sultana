@@ -1,77 +1,177 @@
 @import url(../../common/color.css);
+@import url(../../common/icon.css);
 button[su] {
     opacity: 0.99;
     line-height: 1rem;
-    padding:  0.5rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
     outline: none;
     background-color: var(--Primary);
     color: var(--Primary_i);
     text-decoration: none;
     position: relative;
-    border-radius:2px;
-    box-shadow:0 1px 3px var(--Gray);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px var(--Gray);
     transition: box-shadow 0.5s ease-out;
     cursor: pointer;
     box-sizing: border-box;
     line-height: 1em;
 }
-button[su]::before{
-  content: '';
-display:block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  border-radius: 10%/40%;
-  -webkit-transform: translate(-50%, -50%) ;
-  transform: translate(-50%, -50%) ;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  -webkit-transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
-  transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
-}
-button[su]:hover{
-box-shadow:0 6px 16px var(--Gray);
-  transition: all 0.8s ease-out;
-}
-button[su]:active{
-opacity: 1;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.3s ease-out;
-}
-button[su]:active::before{
-  width: 0;
-  height: 100%;
-  border-radius: 0;
-  background-color: var(--Shadow);
-  -webkit-transition: all 0.01s ease-out;
-  transition: all 0.01s ease-out;
+
+button[su]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 10%/40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
+    transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
 }
 
-button[su][disabled]{
-background-color:var(--Light);
-color:var(--Gray);
-cursor:not-allowed;
-box-shadow: none;
+button[su]:hover {
+    box-shadow: 0 6px 16px var(--Gray);
+    transition: all 0.8s ease-out;
+}
+
+button[su]:active {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+button[su]:active::before {
+    width: 0;
+    height: 100%;
+    border-radius: 0;
+    background-color: var(--Shadow);
+    -webkit-transition: all 0.01s ease-out;
+    transition: all 0.01s ease-out;
+}
+
+button[su][disabled] {
+    background-color: var(--Light);
+    color: var(--Gray);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+button[su~="small"] {
+    font-size: 0.5em;
+}
+
+button[su~="medium"] {
+    font-size: 1.5em;
+}
+
+button[su~="large"] {
+    font-size: 2em;
+}
+
+button[su~="outlined"] {
+    border: 1px solid var(--Primary);
+    background-color: var(--Primary_i);
+    color: var(--Primary);
+}
+
+button[su~="rounded"] {
+    border-radius: 32px;
 }
 
 
-button[su~="small"]{
-  font-size: 0.5em;
-}
-button[su~="medium"]{
-  font-size: 1.5em;
-}
-button[su~="large"]{
-  font-size: 2em;
-}
-button[su~="outlined"]{
-  border: 1px solid var(--Primary);
-  background-color:var(--Primary_i);
-  color:var(--Primary);
+/* nav */
+
+button[su~="-"] {
+    display: block;
+    float: left;
+    -webkit-appearance: none;
+    border: 0;
+    outline: none;
+    padding: 0;
 }
 
-button[su~="rounded"]{
-  border-radius: 32px;
+button[su~="-"] a {
+    display: block;
+    text-indent: -15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 2rem;
+    transition: background-color .2s, color .2s;
+    color: inherit;
+}
+
+button[su~="-"]>a::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    margin: 4px 0 0 .5ch;
+    background: var(--arrow-on) no-repeat;
+    background-size: 100% 100%;
+    transition: transform .2s;
+}
+
+
+/* button[su~="-"]:focus-within a,
+button[su~="-"] a:hover {} */
+
+button[su~="-"]:hover {
+    box-shadow: 0 1px 3px var(--Gray);
+}
+
+button[su~="-"]::before {
+    display: none;
+}
+
+button[su~="-"] hr {
+    margin: 0;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 1px;
+}
+
+button[su~="-"] a:focus-within::after {
+    transform: rotate(180deg);
+}
+
+button[su~="-"] ul {
+    display: none;
+    position: absolute;
+    border: inherit;
+    background-color: inherit;
+    box-shadow: inherit;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+button[su~="-"]:focus-within ul {
+    display: block;
+}
+
+button[su~="-"] ul a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+button[su~="-"] ul a:active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button[su~="-"] a:hover {
+    text-decoration: none;
+}
+
+button[su~="-"] a {
+    color: inherit;
 }
