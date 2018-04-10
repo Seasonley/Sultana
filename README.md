@@ -4,7 +4,7 @@ Sultana is a pure CSS framework.
 Sultana是个纯css原生组件样式框架。标签`<div>`只用来布局(配合css变量)，所有的元素组件都不会使用它，使得每个标签语义发挥作用。
 
 ## To Do List
-* [ ] layout 布局
+* [x] layout 布局
 * [ ] button 按钮
     * [x] color 语义样式
     * [x] outlined 描边

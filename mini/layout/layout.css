@@ -17,7 +17,7 @@ div[su-col] {
     line-height: var(--h);
     display: block;
     float: left;
-    width: calc(100% / 12 * var(--col));
+    width: calc(100% * var(--col));
 }
 
 @media screen and (max-width:480px) {
@@ -28,18 +28,18 @@ div[su-col] {
 
 @media screen and (min-width:481px) and (max-width:720px) {
     div[su-col] {
-        width: calc(100% / 12 * var(--sm));
+        --col: calc(var(--sm) / 12);
     }
 }
 
 @media screen and (min-width: 721px) and (max-width:1199px) {
     div[su-col] {
-        width: calc(100% / 12 * var(--md));
+        --col: calc(var(--md) / 12);
     }
 }
 
 @media screen and (min-width:1200px) {
     div[su-col] {
-        width: calc(100% / 12 * var(--lg));
+        --col: calc(var(--lg) / 12);
     }
 }

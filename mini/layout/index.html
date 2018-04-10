@@ -1,7 +1,14 @@
 <link rel="stylesheet" href="layout.css">
 <link rel="stylesheet" href="../common/reset.css">
+<link rel="stylesheet" href="../common/color.css">
 <div su-row style="--h:var(--row-md)">
-    <div su-col style="--sm:3;--md:4;--lg:12;"></div>
-    <div su-col style="--sm:3;--md:4;--lg:12;"></div>
-    <div su-col style="--sm:3;--md:4;--lg:12;"></div>
+    <div su="primary" su-col style="--sm:3;--md:4;--lg:12;"></div>
+    <div su="light" su-col style="--sm:3;--md:4;--lg:12;"></div>
+    <div su="info" su-col style="--sm:3;--md:4;--lg:12;"></div>
+</div>
+
+<div su-row style="--h:100px">
+    <div su="warning" su-col style="--col:calc(22 / 100);"></div>
+    <div su="info" su-col style="--col:calc(33 / 100);"></div>
+    <div su="primary" su-col style="--col:calc(44 / 100);"></div>
 </div>
