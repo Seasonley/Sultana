@@ -21,14 +21,10 @@
 #photos div::after {
     content: attr(title);
     display: block;
-    opacity: 0.5;
-    width: 200px;
-    height: 20px;
-    margin: 0 50px;
+    width: var(--w);
     float: left;
     text-align: center;
     color: #fff;
-    border-radius: 10px;
     background: #000;
 }
 
@@ -61,7 +57,7 @@
     z-index: 10;
     display: inline-block;
     right: 10px;
-    top: 165px;
+    top: calc(var(--h) - 30px);
     border-radius: 100%;
     background: #f00;
     width: 25px;
@@ -120,7 +116,7 @@
 
 @keyframes ma1 {
     0% {
-        margin-left: -1200px;
+        margin-left: calc(-4 * var(--w));
     }
     100% {
         margin-left: -0px;
@@ -129,27 +125,27 @@
 
 @keyframes ma2 {
     0% {
-        margin-left: -1200px;
+        margin-left: calc(-4 * var(--w));
     }
     100% {
-        margin-left: -300px;
+        margin-left: calc(-1 * var(--w));
     }
 }
 
 @keyframes ma3 {
     100% {
-        margin-left: -600px;
+        margin-left: calc(-2 * var(--w));
     }
 }
 
 @keyframes ma4 {
     100% {
-        margin-left: -900px;
+        margin-left: calc(-3 * var(--w));
     }
 }
 
 @keyframes ma5 {
     100% {
-        margin-left: -1200px;
+        margin-left: calc(-4 * var(--w));
     }
 }
