@@ -1,7 +1,7 @@
 # 🍇Sultana
 基于AMCSS的纯css原生组件样式
 
-## TODO
+## To Do List
 * [ ] layout 布局
 * [ ] button 按钮
     * [x] color 语义样式
@@ -37,7 +37,11 @@
     * [ ] pagination 分页
 
 
+## Quick Start
 
+## Documentation
+
+## Structure
 
 ## Copyright and license
 Code copyright 2018 Seasonley. Code released under [the MIT license](https://github.com/Seasonley/Sultana/blob/master/LICENSE).
