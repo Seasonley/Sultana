@@ -5,31 +5,33 @@
     overflow: hidden;
 }
 
-#photos {
+ul {
     position: absolute;
     width: calc(var(--w) * 5);
     animation: ma 20s ease-out infinite alternate;
 }
 
-#photos div {
+ul li {
     float: left;
     width: var(--w);
     height: var(--h);
     background-size: cover;
 }
 
-#photos div::after {
-    content: attr(title);
+ul li a {
     display: block;
-    width: var(--w);
+    width: calc(0.8 * var(--w));
     float: left;
     text-align: center;
     color: #fff;
-    background: #000;
+    position: absolute;
+    bottom: 0px;
+    height: calc( 0.2 * var(--h));
+    margin-left: calc(0.1 * var(--w));
+    text-shadow: 0 0 5px black;
 }
 
 @keyframes ma {
-    /*---每图片切换有两个阶段：位移切换和静置。中间的效果可以任意定制----*/
     0%,
     20% {
         margin-left: 0px;
@@ -52,7 +54,8 @@
     }
 }
 
-.num {
+#frame>button,
+input {
     position: absolute;
     z-index: 10;
     display: inline-block;
@@ -69,48 +72,54 @@
     opacity: 0.8;
 }
 
-.num:hover {
+#frame>button:hover {
     background: #00f;
 }
 
-.num:hover,
-#photos:hover {
+#frame>button:hover,
+ul:hover {
+    will-change: transform;
     animation-play-state: paused;
 }
 
-.num:nth-child(2) {
+button:nth-child(2),
+input:nth-of-type(2) {
     margin-right: 30px
 }
 
-.num:nth-child(3) {
+button:nth-child(3) {
     margin-right: 60px
 }
 
-.num:nth-child(4) {
+button:nth-child(4) {
     margin-right: 90px
 }
 
-.num:nth-child(5) {
+button:nth-child(5) {
     margin-right: 120px
 }
 
-#a1:hover~#photos {
+input {
+    position: absolute;
+}
+
+button:nth-child(1):focus-within~ul {
     animation: ma1 .5s ease-out forwards;
 }
 
-#a2:hover~#photos {
+button:nth-child(2):focus-within~ul {
     animation: ma2 .5s ease-out forwards;
 }
 
-#a3:hover~#photos {
+button:nth-child(3):focus-within~ul {
     animation: ma3 .5s ease-out forwards;
 }
 
-#a4:hover~#photos {
+button:nth-child(4):focus-within~ul {
     animation: ma4 .5s ease-out forwards;
 }
 
-#a5:hover~#photos {
+button:nth-child(5):focus-within~ul {
     animation: ma5 .5s ease-out forwards;
 }
 
