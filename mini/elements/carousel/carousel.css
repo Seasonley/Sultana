@@ -35,44 +35,50 @@ aside[su~="."] ul li a {
     0%,
     20% {
         margin-left: 0px;
+        --i: 1;
     }
     25%,
     40% {
         margin-left: calc(0px - 1*var(--w));
+        --i: 2;
     }
     45%,
     60% {
         margin-left: calc(0px - 2*var(--w));
+        --i: 3;
     }
     65%,
     80% {
         margin-left: calc(0px - 3*var(--w));
+        --i: 4;
     }
     85%,
     100% {
         margin-left: calc(0px - 4*var(--w));
+        --i: 5;
     }
 }
 
 aside[su~="."] button {
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     display: inline-block;
     right: 10px;
-    top: calc(var(--h) - 30px);
-    border-radius: 100%;
-    background: #f00;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+    top: calc(var(--h) - var(--p));
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    width: 10px;
+    height: 10px;
+    display: block;
+    padding: 0;
     cursor: pointer;
-    color: #fff;
     text-align: center;
     opacity: 0.8;
 }
 
 aside[su~="."] button:hover {
-    background: #00f;
+    background: white;
 }
 
 aside[su~="."] button:hover,
@@ -82,23 +88,23 @@ aside[su~="."] ul:hover {
 }
 
 aside[su~="."] button:nth-child(2) {
-    margin-right: 30px
+    margin-right: var(--p);
 }
 
 aside[su~="."] button:nth-child(3) {
-    margin-right: 60px
+    margin-right: calc(2 * var(--p));
 }
 
 aside[su~="."] button:nth-child(4) {
-    margin-right: 90px
+    margin-right: calc(3 * var(--p));
 }
 
 aside[su~="."] button:nth-child(5) {
-    margin-right: 120px
+    margin-right: calc(4 * var(--p));
 }
 
-aside[su~="."] input {
-    position: absolute;
+aside[su~="."] button:focus-within {
+    background: white;
 }
 
 aside[su~="."] button:nth-child(1):focus-within~ul {
