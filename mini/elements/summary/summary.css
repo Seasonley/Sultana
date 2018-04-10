@@ -21,11 +21,6 @@ details[su~="panel"] summary {
     outline: 0;
 }
 
-details[su~="panel"] content {
-    display: block;
-    padding: 5px;
-}
-
 details[su~="panel"] summary::after {
     content: '';
     position: absolute;

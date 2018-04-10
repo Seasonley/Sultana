@@ -1,162 +1,155 @@
-ul,
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.slider-contaner {
-    width: 100%;
-    position: relative;
-}
-
-.slider-item+.slider-item {
-    opacity: 0;
-}
-
-.slider-item {
-    width: 100%;
+#frame {
     position: absolute;
-    animation-timing-function: linear;
-    animation-name: fade;
-    animation-iteration-count: infinite;
-    background-size: 100%;
+    width: var(--w);
+    height: var(--h);
+    overflow: hidden;
 }
 
-.focus-container {
+#photos {
     position: absolute;
-    z-index: 7;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    width: calc(var(--w) * 5);
+    animation: ma 20s ease-out infinite alternate;
 }
 
-.focus-container li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+#photos div {
     float: left;
-    margin-right: 10px;
-    background: #fff;
+    width: var(--w);
+    height: var(--h);
+    background-size: cover;
 }
 
-.focus-item {
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    animation-timing-function: linear;
-    animation-name: fade;
-    animation-iteration-count: infinite;
+#photos div::after {
+    content: attr(title);
+    display: block;
+    opacity: 0.5;
+    width: 200px;
+    height: 20px;
+    margin: 0 50px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background: #000;
 }
 
-.focus-item2,
-.focus-item3,
-.focus-item4,
-.focus-item5 {
-    opacity: 0;
-}
-
-.focus-container ul {
-    margin-left: 46%;
-}
-
-
-/*设置轮播焦点的位置*/
-
-.focus-container {
-    bottom: 2%;
-}
-
-
-/*设置当前图片焦点的颜色*/
-
-.focus-item {
-    background: #51B1D9;
-}
-
-
-/*设置动画，请根据实际需要修改秒数*/
-
-.slider-item,
-.focus-item {
-    animation-duration: 20s;
-}
-
-.slider-item1,
-.focus-item1 {
-    animation-delay: -1s;
-}
-
-.slider-item2,
-.focus-item2 {
-    animation-delay: 3s;
-}
-
-.slider-item3,
-.focus-item3 {
-    animation-delay: 7s;
-}
-
-.slider-item4,
-.focus-item4 {
-    animation-delay: 11s;
-}
-
-.slider-item5,
-.focus-item5 {
-    animation-delay: 15s;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-        z-index: 2;
-    }
-    5% {
-        opacity: 1;
-        z-index: 1;
-    }
+@keyframes ma {
+    /*---每图片切换有两个阶段：位移切换和静置。中间的效果可以任意定制----*/
+    0%,
     20% {
-        opacity: 1;
-        z-index: 1;
+        margin-left: 0px;
     }
-    25% {
-        opacity: 0;
-        z-index: 0;
+    25%,
+    40% {
+        margin-left: calc(0px - 1*var(--w));
+    }
+    45%,
+    60% {
+        margin-left: calc(0px - 2*var(--w));
+    }
+    65%,
+    80% {
+        margin-left: calc(0px - 3*var(--w));
+    }
+    85%,
+    100% {
+        margin-left: calc(0px - 4*var(--w));
+    }
+}
+
+.num {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    right: 10px;
+    top: 165px;
+    border-radius: 100%;
+    background: #f00;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.num:hover {
+    background: #00f;
+}
+
+.num:hover,
+#photos:hover {
+    animation-play-state: paused;
+}
+
+.num:nth-child(2) {
+    margin-right: 30px
+}
+
+.num:nth-child(3) {
+    margin-right: 60px
+}
+
+.num:nth-child(4) {
+    margin-right: 90px
+}
+
+.num:nth-child(5) {
+    margin-right: 120px
+}
+
+#a1:hover~#photos {
+    animation: ma1 .5s ease-out forwards;
+}
+
+#a2:hover~#photos {
+    animation: ma2 .5s ease-out forwards;
+}
+
+#a3:hover~#photos {
+    animation: ma3 .5s ease-out forwards;
+}
+
+#a4:hover~#photos {
+    animation: ma4 .5s ease-out forwards;
+}
+
+#a5:hover~#photos {
+    animation: ma5 .5s ease-out forwards;
+}
+
+@keyframes ma1 {
+    0% {
+        margin-left: -1200px;
     }
     100% {
-        opacity: 0;
-        z-index: 0;
+        margin-left: -0px;
     }
 }
 
-
-/*设置背景，响应式请利用媒体查询根据断点修改路径*/
-
-.slider-item1 {
-    background-image: url(http://eduppp.cn/images/0/1.jpg);
+@keyframes ma2 {
+    0% {
+        margin-left: -1200px;
+    }
+    100% {
+        margin-left: -300px;
+    }
 }
 
-.slider-item2 {
-    background-image: url(http://eduppp.cn/images/0/2.jpg);
+@keyframes ma3 {
+    100% {
+        margin-left: -600px;
+    }
 }
 
-.slider-item3 {
-    background-image: url(http://eduppp.cn/images/0/3.jpg);
+@keyframes ma4 {
+    100% {
+        margin-left: -900px;
+    }
 }
 
-.slider-item4 {
-    background-image: url(http://eduppp.cn/images/0/4.jpg);
-}
-
-.slider-item5 {
-    background-image: url(http://eduppp.cn/images/0/5.jpg);
-}
-
-
-/*设置图片的高度，请根据具体需要修改百分比，响应式及时修改此值*/
-
-.slider,
-.slider-item {
-    padding-bottom: 40%;
+@keyframes ma5 {
+    100% {
+        margin-left: -1200px;
+    }
 }
