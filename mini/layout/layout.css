@@ -5,7 +5,7 @@ body {
 }
 
 div[su-row] {
-    display: flex;
+    display: block;
     float: left;
     min-height: var(--h);
     width: 100%;
@@ -15,30 +15,31 @@ div[su-row] {
 div[su-col] {
     min-height: var(--h);
     line-height: var(--h);
-    display: flex;
+    display: block;
     float: left;
+    width: calc(100% / 12 * var(--col));
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:480px) {
+    div[su-col] {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:720px) {
     div[su-col] {
         width: calc(100% / 12 * var(--sm));
-        flex-grow: calc(var(--sm));
-        background: red;
     }
 }
 
 @media screen and (min-width: 721px) and (max-width:1199px) {
     div[su-col] {
         width: calc(100% / 12 * var(--md));
-        flex-grow: calc(var(--md));
-        background: green;
     }
 }
 
 @media screen and (min-width:1200px) {
     div[su-col] {
         width: calc(100% / 12 * var(--lg));
-        flex-grow: calc(var(--lg));
-        background: blue;
     }
 }
