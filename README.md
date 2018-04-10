@@ -3,14 +3,14 @@
 
 #TODO
 * [ ] layout 布局
-* [-] button 按钮
+* [ ] button 按钮
     * [x] color 语义样式
     * [x] outlined 描边
     * [x] size 尺寸
     * [x] disabled 禁用
     * [ ] button group ([复选|单选][垂直|水平])按钮组
     * [x] dropdown 下拉列表
-* [-] form 表单
+* [ ] form 表单
     * [x] checkbox(switch) 多选、开关
     * [x] radio 单选
     * [x] range(star) 评分
