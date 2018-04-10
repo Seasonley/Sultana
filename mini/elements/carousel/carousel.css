@@ -1,24 +1,24 @@
-#frame {
+aside[su~="."] {
     position: absolute;
     width: var(--w);
     height: var(--h);
     overflow: hidden;
 }
 
-ul {
+aside[su~="."] ul {
     position: absolute;
     width: calc(var(--w) * 5);
     animation: ma 20s ease-out infinite alternate;
 }
 
-ul li {
+aside[su~="."] ul li {
     float: left;
     width: var(--w);
     height: var(--h);
     background-size: cover;
 }
 
-ul li a {
+aside[su~="."] ul li a {
     display: block;
     width: calc(0.8 * var(--w));
     float: left;
@@ -54,8 +54,7 @@ ul li a {
     }
 }
 
-#frame>button,
-input {
+aside[su~="."] button {
     position: absolute;
     z-index: 10;
     display: inline-block;
@@ -72,54 +71,53 @@ input {
     opacity: 0.8;
 }
 
-#frame>button:hover {
+aside[su~="."] button:hover {
     background: #00f;
 }
 
-#frame>button:hover,
-ul:hover {
+aside[su~="."] button:hover,
+aside[su~="."] ul:hover {
     will-change: transform;
     animation-play-state: paused;
 }
 
-button:nth-child(2),
-input:nth-of-type(2) {
+aside[su~="."] button:nth-child(2) {
     margin-right: 30px
 }
 
-button:nth-child(3) {
+aside[su~="."] button:nth-child(3) {
     margin-right: 60px
 }
 
-button:nth-child(4) {
+aside[su~="."] button:nth-child(4) {
     margin-right: 90px
 }
 
-button:nth-child(5) {
+aside[su~="."] button:nth-child(5) {
     margin-right: 120px
 }
 
-input {
+aside[su~="."] input {
     position: absolute;
 }
 
-button:nth-child(1):focus-within~ul {
+aside[su~="."] button:nth-child(1):focus-within~ul {
     animation: ma1 .5s ease-out forwards;
 }
 
-button:nth-child(2):focus-within~ul {
+aside[su~="."] button:nth-child(2):focus-within~ul {
     animation: ma2 .5s ease-out forwards;
 }
 
-button:nth-child(3):focus-within~ul {
+aside[su~="."] button:nth-child(3):focus-within~ul {
     animation: ma3 .5s ease-out forwards;
 }
 
-button:nth-child(4):focus-within~ul {
+aside[su~="."] button:nth-child(4):focus-within~ul {
     animation: ma4 .5s ease-out forwards;
 }
 
-button:nth-child(5):focus-within~ul {
+aside[su~="."] button:nth-child(5):focus-within~ul {
     animation: ma5 .5s ease-out forwards;
 }
 
