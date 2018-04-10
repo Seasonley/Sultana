@@ -83,6 +83,14 @@ button[su~="rounded"] {
     border-radius: 32px;
 }
 
+button[su~="circle"] {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    overflow: hidden;
+}
+
 
 /* nav */
 
