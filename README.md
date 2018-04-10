@@ -1,5 +1,6 @@
-# 🍇Sultana
-基于AMCSS的纯css原生组件样式
+# Sultana
+Sultana is a CSS framework *without* JS.
+Sultana是个纯css原生组件样式框架
 
 ## To Do List
 * [ ] layout 布局
