@@ -1,8 +1,15 @@
 @import url(../../common/color.css);
 @import url(../../common/icon.css);
+@import url(../layout/layout.css);
 button[su] {
+    float: left;
+    display: block;
+    box-sizing: border-box;
     font-size: 1rem;
-    padding: .5rem 1rem;
+    line-height: var(--x2);
+    height: var(--x2);
+    min-width: var(--x6);
+    padding: 0;
     border: none;
     outline: none;
     background-color: var(--Primary);
@@ -30,7 +37,7 @@ button[su]::before {
 
 button[su]:hover {
     box-shadow: 0 6px 16px var(--Shadow);
-    transition: all .8s ease-out;
+    transition: all .5s ease-out;
 }
 
 button[su]:active {
@@ -52,18 +59,6 @@ button[su][disabled] {
     box-shadow: none;
 }
 
-button[su~="small"] {
-    font-size: 0.75rem;
-}
-
-button[su~="medium"] {
-    font-size: 1.5rem;
-}
-
-button[su~="large"] {
-    font-size: 2rem;
-}
-
 button[su~="outlined"] {
     border: 1px solid var(--Primary);
     background-color: var(--Primary_i);
@@ -71,14 +66,13 @@ button[su~="outlined"] {
 }
 
 button[su~="rounded"] {
-    border-radius: 32px;
+    border-radius: 2rem;
 }
 
 button[su~="circle"] {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    padding: 0;
+    min-width: var(--x2);
+    width: var(--x2);
     overflow: hidden;
 }
 
@@ -104,8 +98,8 @@ button[su~="-"] a {
     outline: 0;
     position: relative;
     z-index: 1;
-    padding: 0.5rem 2rem;
-    transition: background-color .2s, color .2s;
+    padding: 0 1.5rem;
+    transition: background-color .1s, color .1s;
     color: inherit;
 }
 

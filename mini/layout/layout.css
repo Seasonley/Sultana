@@ -1,14 +1,18 @@
 html {
-    font-size: 16px;
+    line-height: 1.4286;
+    font-size: 14px;
 }
 
 body {
-    /* 20 */
-    --row-sm: 1.25rem;
-    /* 30 */
-    --row-md: 1.875rem;
-    /* 60 */
-    --row-lg: 3.75rem;
+    --x1: 0.71429rem;
+    --x2: calc(2 * var(--x1));
+    --x3: calc(3 * var(--x1));
+    --x4: calc(4 * var(--x1));
+    --x5: calc(5 * var(--x1));
+    --x6: calc(6 * var(--x1));
+    --x7: calc(7 * var(--x1));
+    --x8: calc(8 * var(--x1));
+    --x9: calc(9 * var(--x1));
 }
 
 div[su-row] {
