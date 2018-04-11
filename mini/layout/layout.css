@@ -1,7 +1,14 @@
+html {
+    font-size: 16px;
+}
+
 body {
-    --row-sm: 20px;
-    --row-md: 30px;
-    --row-lg: 60px;
+    /* 20 */
+    --row-sm: 1.25rem;
+    /* 30 */
+    --row-md: 1.875rem;
+    /* 60 */
+    --row-lg: 3.75rem;
 }
 
 div[su-row] {

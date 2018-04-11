@@ -1,9 +1,8 @@
 @import url(../../common/color.css);
 @import url(../../common/icon.css);
 button[su] {
-    opacity: 0.99;
-    line-height: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    padding: .5rem 1rem;
     border: none;
     outline: none;
     background-color: var(--Primary);
@@ -11,11 +10,9 @@ button[su] {
     text-decoration: none;
     position: relative;
     border-radius: 2px;
-    box-shadow: 0 1px 3px var(--Gray);
-    transition: box-shadow 0.5s ease-out;
+    box-shadow: 0 1px 3px var(--Shadow);
+    transition: box-shadow .5s ease-out;
     cursor: pointer;
-    box-sizing: border-box;
-    line-height: 1em;
 }
 
 button[su]::before {
@@ -24,25 +21,20 @@ button[su]::before {
     position: absolute;
     left: 50%;
     top: 50%;
-    border-radius: 10%/40%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
-    z-index: -1;
-    -webkit-transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
-    transition: all 0.5s cubic-bezier(0.23, 0.95, 0.56, 1);
+    border-radius: 10%/40%;
+    transform: translate(-50%, -50%);
+    transition: all .5s cubic-bezier(.23, .95, .56, 1);
 }
 
 button[su]:hover {
-    box-shadow: 0 6px 16px var(--Gray);
-    transition: all 0.8s ease-out;
+    box-shadow: 0 6px 16px var(--Shadow);
+    transition: all .8s ease-out;
 }
 
 button[su]:active {
-    opacity: 1;
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.3s ease-out;
+    transition: all .3s ease-out;
 }
 
 button[su]:active::before {
@@ -50,27 +42,26 @@ button[su]:active::before {
     height: 100%;
     border-radius: 0;
     background-color: var(--Shadow);
-    -webkit-transition: all 0.01s ease-out;
-    transition: all 0.01s ease-out;
+    -webkit-transition: all .01s ease-out;
+    transition: all .01s ease-out;
 }
 
 button[su][disabled] {
-    background-color: var(--Light);
-    color: var(--Gray);
+    opacity: .6;
     cursor: not-allowed;
     box-shadow: none;
 }
 
 button[su~="small"] {
-    font-size: 0.5em;
+    font-size: 0.75rem;
 }
 
 button[su~="medium"] {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 button[su~="large"] {
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 button[su~="outlined"] {
