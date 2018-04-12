@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    --x1: 0.71429rem;
+    --x1: 10px;
     --x2: calc(2 * var(--x1));
     --x3: calc(3 * var(--x1));
     --x4: calc(4 * var(--x1));
@@ -13,21 +13,23 @@ body {
     --x7: calc(7 * var(--x1));
     --x8: calc(8 * var(--x1));
     --x9: calc(9 * var(--x1));
+    --h: 2;
 }
 
-div[su-row] {
-    display: block;
-    float: left;
-    min-height: var(--h);
+div[su-row],
+div[su-col] {
+    display: inline-block;
+    line-height: 0;
+    clear: both;
     width: 100%;
-    background: gray;
+    letter-spacing: 0;
+    font-size: 0;
+    vertical-align: bottom;
+    min-height: calc(var(--h) * var(--x1));
 }
 
 div[su-col] {
-    min-height: var(--h);
-    line-height: var(--h);
-    display: block;
-    float: left;
+    clear: none;
     width: calc(100% * var(--col));
 }
 
