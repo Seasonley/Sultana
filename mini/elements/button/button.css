@@ -1,6 +1,6 @@
 @import url(../../common/color.css);
 @import url(../../common/icon.css);
-@import url(../layout/layout.css);
+@import url(../../layout/layout.css);
 button[su] {
     float: left;
     display: block;
@@ -20,6 +20,8 @@ button[su] {
     box-shadow: 0 1px 3px var(--Shadow);
     transition: box-shadow .5s ease-out;
     cursor: pointer;
+    background-color: var(--background-color);
+    color: var(--color);
 }
 
 button[su]::before {
@@ -134,7 +136,7 @@ button[su~="-"] a:focus-within::after {
 }
 
 button[su~="-"] ul {
-    display: none;
+    height: 0;
     position: absolute;
     border: inherit;
     background-color: inherit;
@@ -145,7 +147,28 @@ button[su~="-"] ul {
     list-style-type: none;
 }
 
+button[su~="-"] ul li {
+    display: none;
+}
+
+button[su~="-"] ul input:not(:checked)+span {
+    display: none;
+}
+
 button[su~="-"]:focus-within ul {
+    height: auto;
+}
+
+button[su~="-"]:focus-within ul li {
+    display: block;
+}
+
+button[su~="-"]:focus-within ul input:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+button[su~="-"]:focus-within ul input+span {
     display: block;
 }
 
@@ -163,4 +186,38 @@ button[su~="-"] a:hover {
 
 button[su~="-"] a {
     color: inherit;
+}
+
+button[su~="-"] input,
+button[su~="-"] span {
+    width: 100%;
+    height: var(--x2);
+    line-height: var(--x2);
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
+}
+
+button[su~="-"] span {
+    width: 0;
+    display: block;
+    text-align: left;
+    text-indent: 0.5em;
+}
+
+button[su~="-"] input+span {
+    margin-top: calc(0px - var(--x2));
+}
+
+button[su~="-"] input:checked {
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+button[su~="-"] input:checked+span {
+    position: absolute;
+    top: 0px;
+    width: calc(100% - 1.5em);
+    background-color: var(--background-color);
+    z-index: 1;
 }

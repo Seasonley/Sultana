@@ -3,53 +3,61 @@ body {
     --White_i: hsl(0, 0%, 4%);
     --Gray: darkgray;
     --Gray_i: hsl(0, 0%, 4%);
-    --Black:hsl(0, 0%, 4%);
-    --Black_i:#fff;
-    --Light:hsl(0, 0%, 96%);
-    --Light_i:hsl(0, 0%, 21%);
-    --Dark:hsl(0, 0%, 21%);
-    --Dark_i:hsl(0, 0%, 96%);
-    --Primary:teal;
-    --Primary_i:#fff;
-    --Link:hsl(217, 71%, 53%);
-    --Link_i:#fff;
-    --Info:hsl(204, 86%, 53%);
-    --Info_i:#fff;
-    --Success:hsl(141, 71%, 48%);
-    --Success_i:#fff;
-    --Warning:hsl(48, 100%, 67%);
-    --Warning_i:rgba(0, 0, 0, 0.7);
-    --Danger:hsl(348, 100%, 61%);
-    --Danger_i:#fff;
-    --Shadow:rgba(0,0,0,.4);
-    --Noclr::rgba(0,0,0,0);
+    --Black: hsl(0, 0%, 4%);
+    --Black_i: #fff;
+    --Light: hsl(0, 0%, 96%);
+    --Light_i: hsl(0, 0%, 21%);
+    --Dark: hsl(0, 0%, 21%);
+    --Dark_i: hsl(0, 0%, 96%);
+    --Primary: teal;
+    --Primary_i: #fff;
+    --Link: hsl(217, 71%, 53%);
+    --Link_i: #fff;
+    --Info: hsl(204, 86%, 53%);
+    --Info_i: #fff;
+    --Success: hsl(141, 71%, 48%);
+    --Success_i: #fff;
+    --Warning: hsl(48, 100%, 67%);
+    --Warning_i: rgba(0, 0, 0, 0.7);
+    --Danger: hsl(348, 100%, 61%);
+    --Danger_i: #fff;
+    --Shadow: rgba(0, 0, 0, .4);
+    --Noclr: : rgba(0, 0, 0, 0);
+    --background-color: var(--White);
+    --color: var(--Black);
 }
 
-[su~= "primary"]{
-    background-color:var(--Primary)!important;
-    color:var(--Primary_i)!important;
-  }
-  [su~="link"]{
-    background-color:var(--Link)!important;
-    color:var(--Link_i)!important;
-  }
-  [su~="light"]{
-    background-color:var(--Light)!important;
-    color:var(--Light_i)!important;
-  }
-  [su~="info"]{
-    background-color:var(--Info)!important;
-    color:var(--Info_i)!important;
-  }
-  [su~="success"]{
-    background-color:var(--Success)!important;
-    color:var(--Success_i)!important;
-  }
-  [su~="warning"]{
-    background-color:var(--Warning)!important;
-    color:var(--Warning_i)!important;
-  }
-  [su~="danger"]{
-    background-color:var(--Danger)!important;
-    color:var(--Danger_i)!important;
-  }
+[su~="primary"] {
+    --background-color: var(--Primary)!important;
+    --color: var(--Primary_i)!important;
+}
+
+[su~="link"] {
+    --background-color: var(--Link)!important;
+    --color: var(--Link_i)!important;
+}
+
+[su~="light"] {
+    --background-color: var(--Light)!important;
+    --color: var(--Light_i)!important;
+}
+
+[su~="info"] {
+    --background-color: var(--Info)!important;
+    --color: var(--Info_i)!important;
+}
+
+[su~="success"] {
+    --background-color: var(--Success)!important;
+    --color: var(--Success_i)!important;
+}
+
+[su~="warning"] {
+    --background-color: var(--Warning)!important;
+    --color: var(--Warning_i)!important;
+}
+
+[su~="danger"] {
+    --background-color: var(--Danger)!important;
+    --color: var(--Danger_i)!important;
+}

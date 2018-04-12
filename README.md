@@ -5,10 +5,10 @@ Sultana是个纯css原生组件样式框架。标签`<div>`只用来布局(配�
 
 ## To Do List
 * [x] layout 布局
+* [ ] size 尺寸
 * [ ] button 按钮
     * [x] color 语义样式
     * [x] outlined 描边
-    * [x] size 尺寸
     * [x] disabled 禁用
     * [ ] button group ([复选|单选][垂直|水平])按钮组
     * [x] dropdown 下拉列表
