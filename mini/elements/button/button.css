@@ -2,8 +2,7 @@
 @import url(../../common/icon.css);
 @import url(../../layout/layout.css);
 button[su] {
-    float: left;
-    display: block;
+    display: inline-block;
     box-sizing: border-box;
     font-size: 1rem;
     line-height: var(--x2);
@@ -22,11 +21,12 @@ button[su] {
     cursor: pointer;
     background-color: var(--background-color);
     color: var(--color);
+    word-wrap: normal;
 }
 
 button[su]::before {
     content: '';
-    display: block;
+    display: inline-block;
     position: absolute;
     left: 50%;
     top: 50%;

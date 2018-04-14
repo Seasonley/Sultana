@@ -9,6 +9,7 @@ aside[su~="."] ul {
     position: absolute;
     width: calc(var(--w) * 5);
     animation: ma 20s ease-out infinite alternate;
+    padding: 0;
 }
 
 aside[su~="."] ul li {
@@ -19,6 +20,7 @@ aside[su~="."] ul li {
 }
 
 aside[su~="."] ul li a {
+    margin: 0;
     display: block;
     width: calc(0.8 * var(--w));
     float: left;

@@ -1,8 +1,3 @@
-@import url(../../common/color.css);
-body[su~="-"] {
-    min-height: 130vh;
-}
-
 body[su~="-"] {
     background: linear-gradient(to right top, var(--Primary) 50%, var(--White) 50%);
     background-size: 100% calc(100% - 99.6vh);

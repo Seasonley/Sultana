@@ -16,21 +16,20 @@ body {
     --h: 2;
 }
 
-div[su-row],
-div[su-col] {
-    display: inline-block;
-    line-height: 0;
+div[su-row] {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 1px;
     clear: both;
-    width: 100%;
-    letter-spacing: 0;
-    font-size: 0;
-    vertical-align: bottom;
-    min-height: calc(var(--h) * var(--x1));
 }
 
 div[su-col] {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     clear: none;
     width: calc(100% * var(--col));
+    min-height: 1px;
 }
 
 @media screen and (max-width:480px) {
@@ -55,4 +54,104 @@ div[su-col] {
     div[su-col] {
         --col: calc(var(--lg) / 12);
     }
+}
+
+[su-flex] {
+    display: flex;
+}
+
+[su-flex~="row"] {
+    flex-direction: row
+}
+
+[su-flex~="-row"] {
+    flex-direction: row-reverse
+}
+
+[su-flex~="col"] {
+    flex-direction: column
+}
+
+[su-flex~="-col"] {
+    flex-direction: column-reverse
+}
+
+[su-flex~="!wrap"] {
+    flex-wrap: nowrap
+}
+
+[su-flex~="wrap"] {
+    flex-wrap: wrap
+}
+
+[su-flex~="-wrap"] {
+    flex-wrap: wrap-reverse
+}
+
+[su-flex~="jc-100"] {
+    justify-content: flex-start
+}
+
+[su-flex~="jc-001"] {
+    justify-content: flex-end
+}
+
+[su-flex~="jc-010"] {
+    justify-content: center
+}
+
+[su-flex~="jc-101"] {
+    justify-content: space-between
+}
+
+[su-flex~="jc-around"] {
+    justify-content: space-around
+}
+
+[su-flex~="ai-100"] {
+    align-items: flex-start
+}
+
+[su-flex~="ai-001"] {
+    align-items: flex-end
+}
+
+[su-flex~="ai-010"] {
+    align-items: center
+}
+
+[su-flex~="ai-101"] {
+    align-items: space-between
+}
+
+[su-flex~="ai-baseline"] {
+    align-items: baseline
+}
+
+[su-flex~="ai-stretch"] {
+    align-items: stretch
+}
+
+[su-flex~="ac-100"] {
+    align-content: flex-start
+}
+
+[su-flex~="ac-001"] {
+    align-content: flex-end
+}
+
+[su-flex~="ac-010"] {
+    align-content: center
+}
+
+[su-flex~="ac-101"] {
+    align-content: space-between
+}
+
+[su-flex~="ac-around"] {
+    align-content: space-around
+}
+
+[su-flex~="ai-stretch"] {
+    align-content: stretch
 }
