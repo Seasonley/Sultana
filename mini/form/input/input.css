@@ -1,5 +1,3 @@
-@import url(../../common/color.css);
-@import url(../../common/icon.css);
 input[su][type="checkbox"],
 input[su][type="radio"] {
     display: none;
