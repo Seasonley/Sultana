@@ -11,7 +11,7 @@
 <style>
     #nav {
         position: fixed;
-        width: 30vw;
+        width: 20vw;
         height: 100vh;
         overflow-y: auto;
         padding: 2vw 0 0 2vw;
@@ -24,13 +24,22 @@
     }
     
      :target {
-        margin-top: 100px;
+        animation: targetmove 0.2s ease-out;
+    }
+    
+    @keyframes targetmove {
+        from {
+            padding-top: 10vh;
+        }
+        to {
+            padding-top: 0;
+        }
     }
 </style>
 
 <body su="-">
     <div su-row>
-        <div su-col style="--col:0.3">
+        <div su-col style="--col:0.2">
             <div class="markdown-body" id="nav">
                 <h3>Sultana 中文文档</h3>
                 <h4>目录</h4>
@@ -48,56 +57,125 @@
                 </ol>
             </div>
         </div>
-        <div su-col style="--col:0.7" id="main" class="markdown-body">
-            <div>
-                <h1 id="intro">简介</h1>
+        <div su-col style="--col:0.8" id="main" class="markdown-body">
+            <div id="intro">
+                <div>
+                    <h1>简介</h1>
+                    <p>Sultana是个纯css原生组件样式框架。标签<code>div</code>只用来布局(配合css变量)，所有的元素组件都不会使用它，使得每个标签语义发挥作用。</p>
+                </div>
+
             </div>
 
-            <div>
-                <h1 id="layout">布局</h1>
+            <div id="layout">
+                <div>
+                     <h1>布局</h1>
+                    <p>Sultana通过css变量打造网格系统。和Bootstrap一样支持12列的布局。为3中不同尺寸的媒体查询范围创建了一个等级。</p> 
+                    <h2>网格选项</h2>
+                    <h3>su-row</h3>
+                    <p><code>su-row</code>代表横容器</p>
+                    <h3>su-col</h3>
+                    <p><code>su-row</code>代表纵容器</p>
+                    <table>
+                        <tr>
+                            <td>su-col</td>
+                            <td>特小屏(-,480px)</td>
+                            <td>小屏(480px,720px)</td>
+                            <td>中屏(720px,1200px)</td>
+                            <td>大屏(1200px,+)</td>
+                            <td>绝对定位(覆盖以上变量)</td>
+                        </tr>
+                        <tr>
+                            <td>css变量名</td>
+                            <td></td>
+                            <td><code>--sm</code></td>
+                            <td><code>--md</code></td>
+                            <td><code>--lg</code></td>
+                            <td><code>--col</code></td>
+                        </tr>
+                        <tr>
+                            <td>类型</td>
+                            <td></td>
+                            <td><code>int</code>(1 , 2 , ... , 12)</td>
+                            <td><code>int</code>(1 , 2 , ... , 12)</td>
+                            <td><code>int</code>(1 , 2 , ... , 12)</td>
+                            <td><code>number</code>(90% , 0.3 , ...)</td>
+                        </tr>
+
+                    </table>
+                    <h3>示例</h3>
+                </div>
 
                 <div su-row>
                     <div su="primary" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
                     <div su="light" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
                     <div su="info" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
                 </div>
-
                 <div su-row>
                     <div su="warning" su-col style="--col:0.22;">--col:0.22;</div>
                     <div su="info" su-col style="--col:0.33;">--col:0.33;</div>
                     <div su="primary" su-col style="--col:0.44;">--col:0.44;</div>
                 </div>
-
-                <div su-flex="row !wrap jc-100 ai-100 ac-100" style="--col:0.5">
-                    <div>1-1</div>
-                    <div>1-2</div>
-                    <div>1-3</div>
+                <div>
+                    <h3>su-flex</h3>
+                    <ol>
+                        <li>j=justify,a=algin,c=content</li>
+                        <li>100,001,010,101=start,end,center,between</li>
+                        <li>-row=row-reverse</li>
+                        <li>-warp=warp-reverse</li>
+                        <li>!warp=no-warp</li>
+                    </ol>
+                    <h3>示例</h3>
                 </div>
-                <div su-flex="-row wrap jc-001 ai-001 ac-001">
-                    <div>2-1</div>
-                    <div>2-2</div>
-                    <div>2-3</div>
-                </div>
-                <div su-flex="col -wrap jc-010 ai-010 ac-010">
-                    <div>3-1</div>
-                    <div>3-2</div>
-                    <div>3-3</div>
-                </div>
-                <div su-flex="-col jc-101 ai-baseline ac-101">
-                    <div>4-1</div>
-                    <div>4-2</div>
-                    <div>4-3</div>
-                </div>
-                <div su-flex="jc-around ai-stretch ac-around">
-                    <div>5-1</div>
-                    <div>5-2</div>
-                    <div>5-3</div>
-                </div>
-                <div su-flex="ac-stretch">
-                    <div>6-1</div>
-                    <div>6-2</div>
-                    <div>6-3</div>
-                </div>
+                <ol>
+                    <li>
+                        <code>div su-flex="row !wrap jc-100 ai-100 ac-100"</code>
+                        <div su-flex="row !wrap jc-100 ai-100 ac-100">
+                            <div>1-1</div>
+                            <div>1-2</div>
+                            <div>1-3</div>
+                        </div>
+                    </li>
+                    <li>
+                        <code>div su-flex="-row wrap jc-001 ai-001 ac-001"</code>
+                        <div su-flex="-row wrap jc-001 ai-001 ac-001">
+                            <div>2-1</div>
+                            <div>2-2</div>
+                            <div>2-3</div>
+                        </div>
+                    </li>
+                    <li>
+                        <code>div su-flex="col -wrap jc-010 ai-010 ac-010"</code>
+                        <div su-flex="col -wrap jc-010 ai-010 ac-010">
+                            <div>3-1</div>
+                            <div>3-2</div>
+                            <div>3-3</div>
+                        </div>
+                    </li>
+                    <li>
+                        <code>div su-flex="-col jc-101 ai-baseline ac-101"</code>
+                        <div su-flex="-col jc-101 ai-baseline ac-101">
+                            <div>4-1</div>
+                            <div>4-2</div>
+                            <div>4-3</div>
+                        </div>
+                    </li>
+                    <li>
+                        <code>div su-flex="jc-around ai-stretch ac-around"</code>
+                        <div su-flex="jc-around ai-stretch ac-around">
+                            <div>5-1</div>
+                            <div>5-2</div>
+                            <div>5-3</div>
+                        </div>
+                    </li>
+                    <li>
+                        <code>div su-flex="ac-stretch"</code>
+                        <div su-flex="ac-stretch">
+                            <div>6-1</div>
+                            <div>6-2</div>
+                            <div>6-3</div>
+                        </div>
+                    </li>
+                </ol>
             </div>
 
 
@@ -146,7 +224,52 @@
 
             <div>
                 <h1 id="form">表单</h1>
+                <label su-input>
+                    <input su type="checkbox"/>
+                    <span>check</span>
+                </label>
+                <br>
+                <label su-input>
+                    <input su type="checkbox" disabled/>
+                    <span>check</span>
+                </label>
+                <br>
+                <label su-input>
+                    <input su type="checkbox" disabled checked/>
+                    <span>check</span>
+                </label>
+                <br>
 
+                <label su-input>
+                    <input su type="radio" name="ra"/>
+                    <span>radio1</span>
+                </label>
+                <br>
+                <label su-input>
+                    <input su type="radio" name="ra"/>
+                    <span>radio2</span>
+                </label>
+                <br>
+                <label su-input>
+                    <input su type="radio" disabled name="ra"/>
+                    <span>radio1</span>
+                </label>
+                <br>
+                <label su-input>
+                    <input su type="radio" disabled checked name="ra"/>
+                    <span>radio1</span>
+                </label>
+                <br>
+
+                <label su-input>
+                    <input su="switch" type="checkbox">
+                    <span></span>
+                </label>
+                <br>
+                <input su="star" value="1" min="1" max="5" type="range" onchange="this.setAttribute('value', this.value)" />
+                <br>
+                <input su="primary" value="1" min="1" max="100" type="range" />
+                <hr>
                 <progress su max="100" value="80"></progress>
                 <br>
                 <progress su="star" max="5" value="2"></progress>
@@ -307,8 +430,3 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.bootcss.com/markdown.js/0.3.0/markdown.min.js"></script>
-    <script>
-        // document.querySelector("#main").innerHTML = markdown.toHTML(document.querySelector("#main").innerHTML);
-    </script>
