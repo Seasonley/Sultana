@@ -23,8 +23,6 @@ body {
     --Danger_i: #fff;
     --Shadow: rgba(0, 0, 0, .4);
     --Noclr: : rgba(0, 0, 0, 0);
-    --background-color: var(--White);
-    --color: var(--Black);
 }
 
 [su~="primary"] {
