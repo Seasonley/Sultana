@@ -34,7 +34,7 @@ div[su-col] {
 
 @media screen and (max-width:480px) {
     div[su-col] {
-        width: 100%;
+        width: auto!important;
     }
 }
 
