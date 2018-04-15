@@ -202,6 +202,7 @@ button[su~="-"] span {
 
 button[su~="-"] input+span {
     margin-top: calc(0px - var(--x2));
+    word-wrap: normal;
 }
 
 button[su~="-"] input:checked {
@@ -216,4 +217,8 @@ button[su~="-"] input:checked+span {
     background-color: var(--background-color);
     z-index: 1;
     background: inherit;
+}
+
+label[su-input] {
+    word-wrap: normal;
 }
