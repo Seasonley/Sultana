@@ -11,19 +11,16 @@
 <style>
     #nav {
         position: fixed;
-        left: 0;
-        top: 2px;
+        width: 30vw;
         height: 100vh;
-        width: 300px;
-        overflow-y: scroll;
+        overflow-y: auto;
         padding: 2vw 0 0 2vw;
         box-shadow: 0 0 40px #CCC;
         border-right: 1px solid #BBB;
-        z-index: 1;
     }
     
     #main {
-        padding: 0 30px 0 330px;
+        padding: 0 30px;
     }
     
      :target {
@@ -32,268 +29,286 @@
 </style>
 
 <body su="-">
-    <div id="nav" class="markdown-body">
-        <h3>Sultana 中文文档</h3>
-        <h4>目录</h4>
-        <ol>
-            <li><a href="#intro">简介</a></li>
-            <li><a href="#layout">布局</a></li>
-            <li><a href="#button">按钮</a></li>
-            <li><a href="#form">表单</a></li>
-            <li><a href="#widget">可交互控件</a>
+    <div su-row>
+        <div su-col style="--col:0.3">
+            <div class="markdown-body" id="nav">
+                <h3>Sultana 中文文档</h3>
+                <h4>目录</h4>
                 <ol>
-                    <li><a href="#widget/menu">导航</a></li>
+                    <li><a href="#intro">简介</a></li>
+                    <li><a href="#layout">布局</a></li>
+                    <li><a href="#button">按钮</a></li>
+                    <li><a href="#form">表单</a></li>
+                    <li><a href="#widget">可交互控件</a>
+                        <ol>
+                            <li><a href="#widget/menu">导航</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#others">其他</a>
                 </ol>
-            </li>
-            <li><a href="#others">其他</a>
-        </ol>
-    </div>
-    <div id="main" class="markdown-body">
-        <h1 id="intro">简介</h1>
-
-        <h1 id="layout">布局</h1>
-
-        <div su-row>
-            <div su="primary" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
-            <div su="light" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
-            <div su="info" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
+            </div>
         </div>
+        <div su-col style="--col:0.7" id="main" class="markdown-body">
+            <div>
+                <h1 id="intro">简介</h1>
+            </div>
 
-        <div su-row>
-            <div su="warning" su-col style="--col:0.22;">--col:0.22;</div>
-            <div su="info" su-col style="--col:0.33;">--col:0.33;</div>
-            <div su="primary" su-col style="--col:0.44;">--col:0.44;</div>
-        </div>
+            <div>
+                <h1 id="layout">布局</h1>
 
-        <div su-flex="row !wrap jc-100 ai-100 ac-100" style="--col:0.5">
-            <div>1-1</div>
-            <div>1-2</div>
-            <div>1-3</div>
-        </div>
-        <div su-flex="-row wrap jc-001 ai-001 ac-001">
-            <div>2-1</div>
-            <div>2-2</div>
-            <div>2-3</div>
-        </div>
-        <div su-flex="col -wrap jc-010 ai-010 ac-010">
-            <div>3-1</div>
-            <div>3-2</div>
-            <div>3-3</div>
-        </div>
-        <div su-flex="-col jc-101 ai-baseline ac-101">
-            <div>4-1</div>
-            <div>4-2</div>
-            <div>4-3</div>
-        </div>
-        <div su-flex="jc-around ai-stretch ac-around">
-            <div>5-1</div>
-            <div>5-2</div>
-            <div>5-3</div>
-        </div>
-        <div su-flex="ac-stretch">
-            <div>6-1</div>
-            <div>6-2</div>
-            <div>6-3</div>
-        </div>
+                <div su-row>
+                    <div su="primary" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
+                    <div su="light" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
+                    <div su="info" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
+                </div>
 
+                <div su-row>
+                    <div su="warning" su-col style="--col:0.22;">--col:0.22;</div>
+                    <div su="info" su-col style="--col:0.33;">--col:0.33;</div>
+                    <div su="primary" su-col style="--col:0.44;">--col:0.44;</div>
+                </div>
 
-
-
-        <h1 id="button">按钮</h1>
-
-
-        <button su>Button</button>
-
-        <button su disabled>disabled</button>
-        <button su="light">light</button>
-        <button su="primary">primary</button>
-        <button su="link">link</button>
-        <button su="info">info</button>
-        <button su="success">success</button>
-        <button su="warning">warning</button>
-        <button su="danger">danger</button>
-        <button su="outlined">outlined</button>
-        <button su="rounded">rounded</button>
-        <button su="circle">★</button>
-        <button su="outlined -">
-                <a href="javascript:">forcus menu</a>
-                <ul>
-                    <li><a href="javascript:">vsdvsdv</a></li>
-                    <li><a href="javascript:">sdvdsv</a></li>
-                    <li><a href="javascript:">sdvdsv</a></li>
-                    <li><a href="javascript:">sdvdsv</a></li>
-                    <hr>
-                    <li><a href="javascript:">sdvdsv</a></li>
-                </ul>
-            </button>
-        <button su="outlined -">
-            <a href="javascript:">(choice...)</a>
-            <ul>
-                <input title="(choice...)" checked type="radio" name="ra" value=""/>
-                <span>(choice...)</span>
-                <input title="A.dada" type="radio" name="ra" value="1"/>
-                <span>A.dada</span>
-                <input title="B.huha" type="radio" name="ra" value="2"/>
-                <span >B.huha</span>
-        
-            </ul>
-        </button>
-
-        <h1 id="form">表单</h1>
-
-        <progress su max="100" value="80"></progress>
-        <br>
-        <progress su="star" max="5" value="2"></progress>
-
-        <h1 id="widget">可交互控件</h1>
-        <h2 id="widget/tooltip">冒泡提示</h2>
-
-        <button su su-hint="bottom-right" aria-label="tooltip"> bottom-right</button>
-        <button su su-hint="bottom" aria-label="tooltip"> bottom</button>
-        <button su su-hint="bottom-left" aria-label="tooltip"> bottom-left</button>
-        <br>
-        <button su su-hint="right" aria-label="tooltip"> right</button>
-        <button su su-hint="rounded" aria-label="tooltip">rounded</button>
-        <button su su-hint="left" aria-label="tooltip"> left</button>
-        <br>
-        <button su su-hint="top-right" aria-label="tooltip"> top-right</button>
-        <button su su-hint="top" aria-label="tooltip"> top</button>
-        <button su su-hint="top-left" aria-label="tooltip"> top-left</button>
+                <div su-flex="row !wrap jc-100 ai-100 ac-100" style="--col:0.5">
+                    <div>1-1</div>
+                    <div>1-2</div>
+                    <div>1-3</div>
+                </div>
+                <div su-flex="-row wrap jc-001 ai-001 ac-001">
+                    <div>2-1</div>
+                    <div>2-2</div>
+                    <div>2-3</div>
+                </div>
+                <div su-flex="col -wrap jc-010 ai-010 ac-010">
+                    <div>3-1</div>
+                    <div>3-2</div>
+                    <div>3-3</div>
+                </div>
+                <div su-flex="-col jc-101 ai-baseline ac-101">
+                    <div>4-1</div>
+                    <div>4-2</div>
+                    <div>4-3</div>
+                </div>
+                <div su-flex="jc-around ai-stretch ac-around">
+                    <div>5-1</div>
+                    <div>5-2</div>
+                    <div>5-3</div>
+                </div>
+                <div su-flex="ac-stretch">
+                    <div>6-1</div>
+                    <div>6-2</div>
+                    <div>6-3</div>
+                </div>
+            </div>
 
 
 
+            <div>
+                <h1 id="button">按钮</h1>
 
 
-        <h2 id="widget/tooltip">导航</h2>
+                <button su>Button</button>
 
-        <aside su="|" style="width:300px;border:1px solid teal;padding:10px;">
-            <p>General</p>
-            <details>
-                <summary disabled>Dashboard</summary>
-            </details>
-            <p>Administration</p>
-            <details>
-                <summary>Manage Your Team</summary>
-            </details>
-            <ul>
-                <li>
+                <button su disabled>disabled</button>
+                <button su="light">light</button>
+                <button su="primary">primary</button>
+                <button su="link">link</button>
+                <button su="info">info</button>
+                <button su="success">success</button>
+                <button su="warning">warning</button>
+                <button su="danger">danger</button>
+                <button su="outlined">outlined</button>
+                <button su="rounded">rounded</button>
+                <button su="circle">★</button>
+                <button su="outlined -">
+                    <a href="javascript:">forcus menu</a>
+                    <ul>
+                        <li><a href="javascript:">vsdvsdv</a></li>
+                        <li><a href="javascript:">sdvdsv</a></li>
+                        <li><a href="javascript:">sdvdsv</a></li>
+                        <li><a href="javascript:">sdvdsv</a></li>
+                        <hr>
+                        <li><a href="javascript:">sdvdsv</a></li>
+                    </ul>
+                </button>
+                <button su="outlined -">
+                    <a href="javascript:">(blank)</a>
+                    <ul>
+                        <input checked type="radio" name="ra" value=""/>
+                        <span>(blank)</span>
+                        <input title="A.dada" type="radio" name="ra" value="1"/>
+                        <span>A.da</span>
+                        <input title="B.huha" type="radio" name="ra" value="2"/>
+                        <span >B.la</span>
+                
+                    </ul>
+                </button>
+            </div>
+
+            <div>
+                <h1 id="form">表单</h1>
+
+                <progress su max="100" value="80"></progress>
+                <br>
+                <progress su="star" max="5" value="2"></progress>
+            </div>
+
+            <h1 id="widget">可交互控件</h1>
+            <div>
+                <h2 id="widget/tooltip">冒泡提示</h2>
+
+                <button su su-hint="bottom-right" aria-label="tooltip"> bottom-right</button>
+                <button su su-hint="bottom" aria-label="tooltip"> bottom</button>
+                <button su su-hint="bottom-left" aria-label="tooltip"> bottom-left</button>
+                <br>
+                <button su su-hint="right" aria-label="tooltip"> right</button>
+                <button su su-hint="rounded" aria-label="tooltip">rounded</button>
+                <button su su-hint="left" aria-label="tooltip"> left</button>
+                <br>
+                <button su su-hint="top-right" aria-label="tooltip"> top-right</button>
+                <button su su-hint="top" aria-label="tooltip"> top</button>
+                <button su su-hint="top-left" aria-label="tooltip"> top-left</button>
+            </div>
+
+
+
+            <div>
+                <h2 id="widget/tooltip">导航</h2>
+
+                <aside su="|" style="width:300px;">
+                    <p>General</p>
                     <details>
-                        <summary disabled>members</summary>
+                        <summary disabled>Dashboard</summary>
                     </details>
-                </li>
-                <li>
+                    <p>Administration</p>
                     <details>
-                        <summary>Plugins</summary>
+                        <summary>Manage Your Team</summary>
                     </details>
                     <ul>
                         <li>
                             <details>
-                                <summary disabled>Sultana</summary>
+                                <summary disabled>members</summary>
                             </details>
                         </li>
                         <li>
                             <details>
-                                <summary disabled>Bulma</summary>
+                                <summary>Plugins</summary>
                             </details>
+                            <ul>
+                                <li>
+                                    <details>
+                                        <summary disabled>Sultana</summary>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details>
+                                        <summary disabled>Bulma</summary>
+                                    </details>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
-            <p>Transactions</p>
-            <details>
-                <summary disabled>Payments</summary>
-            </details>
-        </aside>
-
-        <br>
-        <h2 id="widget/tooltip">树</h2>
-        <aside su="+" style="width:300px;">
-            <details open>
-                <summary>root</summary>
-                <details>
-                    <summary>usr</summary>
+                    <p>Transactions</p>
                     <details>
-                        <summary disabled>home</summary>
+                        <summary disabled>Payments</summary>
                     </details>
-                    <details>
-                        <summary>www</summary>
+                </aside>
+            </div>
+            <div>
+                <h2 id="widget/tooltip">树</h2>
+                <aside su="+" style="width:300px;">
+                    <details open>
+                        <summary>root</summary>
                         <details>
-                            <summary disabled>config</summary>
+                            <summary>usr</summary>
+                            <details>
+                                <summary disabled>home</summary>
+                            </details>
+                            <details>
+                                <summary>www</summary>
+                                <details>
+                                    <summary disabled>config</summary>
+                                </details>
+                            </details>
+                        </details>
+                        <details>
+                            <summary>bin</summary>
+                            <details>
+                                <summary disabled>log</summary>
+                            </details>
+                        </details>
+                        <details>
+                            <summary disabled>test</summary>
+                        </details>
+                        <details>
+                            <summary disabled>dev</summary>
                         </details>
                     </details>
-                </details>
-                <details>
-                    <summary>bin</summary>
-                    <details>
-                        <summary disabled>log</summary>
-                    </details>
-                </details>
-                <details>
-                    <summary disabled>test</summary>
-                </details>
-                <details>
-                    <summary disabled>dev</summary>
-                </details>
-            </details>
-        </aside>
-
-        <br>
-        <aside su="v" style="width:300px;">
-            <details open>
-                <summary>root</summary>
-                <details>
-                    <summary>usr</summary>
-                    <details>
-                        <summary disabled>home</summary>
-                    </details>
-                    <details>
-                        <summary>www</summary>
+                </aside>
+                <aside su="v" style="width:300px;">
+                    <details open>
+                        <summary>root</summary>
                         <details>
-                            <summary disabled>config</summary>
+                            <summary>usr</summary>
+                            <details>
+                                <summary disabled>home</summary>
+                            </details>
+                            <details>
+                                <summary>www</summary>
+                                <details>
+                                    <summary disabled>config</summary>
+                                </details>
+                            </details>
+                        </details>
+                        <details>
+                            <summary>bin</summary>
+                            <details>
+                                <summary disabled>log</summary>
+                            </details>
+                        </details>
+                        <details>
+                            <summary disabled title="test.pdf">test.pdf</summary>
+                        </details>
+                        <details>
+                            <summary disabled>dev</summary>
                         </details>
                     </details>
-                </details>
-                <details>
-                    <summary>bin</summary>
-                    <details>
-                        <summary disabled>log</summary>
-                    </details>
-                </details>
-                <details>
-                    <summary disabled title="test.pdf">test.pdf</summary>
-                </details>
-                <details>
-                    <summary disabled>dev</summary>
-                </details>
-            </details>
-        </aside>
+                </aside>
+            </div>
+            <div>
+                <h2 id="widget/tooltip">轮播</h2>
+                <div su-flex="row" style="height: 300px;line-height: 300px;">
+                    <aside su="." style="--w:400px;--h:300px;--p:20px;">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <ul>
+                            <li style="background:gray;">
+                                <a>111</a>
+                            </li>
+                            <li style="background:orange;">
+                                <a>222</a>
+                            </li>
+                            <li style="background:teal;">
+                                <a>333</a>
+                            </li>
+                            <li style="background:blue;">
+                                <a>444</a>
+                            </li>
+                            <li style="background:black;">
+                                <a>555</a>
+                            </li>
+                        </ul>
 
-        <h2 id="widget/tooltip">轮播</h2>
-        <div style="height: 400px;width: 300px;">
-            <aside su="." style="--w:400px;--h:300px;--p:20px;">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <ul>
-                    <li style="background:gray;">
-                        <a>111</a>
-                    </li>
-                    <li style="background:orange;">
-                        <a>222</a>
-                    </li>
-                    <li style="background:teal;">
-                        <a>333</a>
-                    </li>
-                    <li style="background:blue;">
-                        <a>444</a>
-                    </li>
-                    <li style="background:black;">
-                        <a>555</a>
-                    </li>
-                </ul>
+                    </aside>
+                </div>
 
-            </aside>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.bootcss.com/markdown.js/0.3.0/markdown.min.js"></script>
+    <script>
+        // document.querySelector("#main").innerHTML = markdown.toHTML(document.querySelector("#main").innerHTML);
+    </script>
