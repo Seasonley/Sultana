@@ -37,7 +37,7 @@
     }
 </style>
 
-<body su="-">
+<body>
     <div su-row>
         <div su-col style="--col:0.2">
             <div class="markdown-body" id="nav">
@@ -71,9 +71,9 @@
                      <h1>布局</h1>
                     <p>Sultana通过css变量打造网格系统。和Bootstrap一样支持12列的布局。为3中不同尺寸的媒体查询范围创建了一个等级。</p> 
                     <h2>网格选项</h2>
-                    <h3>su-row 横</h3>
+                    <h3>横 su-row</h3>
                     <p><code>su-row</code>代表横容器</p>
-                    <h3>su-col 纵</h3>
+                    <h3>纵 su-col </h3>
                     <p><code>su-row</code>代表纵容器</p>
                     <table>
                         <tr>
@@ -102,15 +102,15 @@
                         </tr>
 
                     </table>
-                    <h3>--xx-v --xx-d 辅</h3>
+                    <h3>辅 --xx-v --xx-d </h3>
                     <p><code>--sm-v</code>代表sm visible</p>
                     <p><code>--lg-d</code>代表lg display</p>
 
-                    <h3>示例</h3>
+                    <h4>示例</h4>
                 </div>
 
                 <div su-row>
-                    <div su="primary" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;--sm-v:hidden</div>
+                    <div su="primary" su-col style="--sm:3;--md:4;--lg:12;--sm-v:hidden">--sm:3;--md:4;--lg:12;--sm-v:hidden</div>
                     <div su="light" su-col style="--sm:3.2;--md:4.5;--lg:12;">--sm:3.2;--md:4.5;--lg:12;</div>
                     <div su="info" su-col style="--sm:3.3;--lg:12;">--sm:3.8;--lg:12;</div>
                 </div>
@@ -120,7 +120,7 @@
                     <div su="primary" su-col style="--col:0.44;">--col:0.44;</div>
                 </div>
                 <div>
-                    <h3>su-flex 弹</h3>
+                    <h3>弹 su-flex</h3>
                     <ol>
                         <li>j=justify,a=algin,c=content</li>
                         <li>100,001,010,101=start,end,center,between</li>
@@ -128,7 +128,7 @@
                         <li>-warp=warp-reverse</li>
                         <li>!warp=no-warp</li>
                     </ol>
-                    <h3>示例</h3>
+                    <h4>示例</h4>
                 </div>
                 <ol>
                     <li>
@@ -186,20 +186,58 @@
 
             <div>
                 <h1 id="button">按钮</h1>
-                <h2>button[su]常规</h2>
+                <h2>常规</h2>
                 <div>
-                    <button su>Button</button>
-                    <button su disabled>disabled</button>
-                    <button su="light">light</button>
-                    <button su="primary">primary</button>
-                    <button su="link">link</button>
-                    <button su="info">info</button>
-                    <button su="success">success</button>
-                    <button su="warning">warning</button>
-                    <button su="danger">danger</button>
-                    <button su="outlined">outlined</button>
-                    <button su="rounded">rounded</button>
-                    <button su="circle">★</button>
+                    <table>
+                        <tr>
+                            <td>button[su]</td>
+                            <td><button su>Button</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su][disabled]</td>
+                            <td><button su disabled>disabled</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="light"]</td>
+                            <td><button su="light">light</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="primary"]</td>
+                            <td><button su="primary">primary</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="link"]</td>
+                            <td><button su="link">link</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="info"]</td>
+                            <td><button su="info">info</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="success"]</td>
+                            <td><button su="success">success</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="warning"]</td>
+                            <td><button su="warning">warning</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="danger"]</td>
+                            <td><button su="danger">danger</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="outlined"]</td>
+                            <td><button su="outlined">outlined</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="rounded"]</td>
+                            <td><button su="rounded">rounded</button></td>
+                        </tr>
+                        <tr>
+                            <td>button[su~="circle"]</td>
+                            <td><button su="circle">★</button></td>
+                        </tr>
+                    </table>
                 </div>
                 <h2>button[su~="-"]栏(button + a)</h2>
                 <div style="height:150px;">
