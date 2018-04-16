@@ -71,9 +71,9 @@
                      <h1>布局</h1>
                     <p>Sultana通过css变量打造网格系统。和Bootstrap一样支持12列的布局。为3中不同尺寸的媒体查询范围创建了一个等级。</p> 
                     <h2>网格选项</h2>
-                    <h3>su-row</h3>
+                    <h3>su-row 横</h3>
                     <p><code>su-row</code>代表横容器</p>
-                    <h3>su-col</h3>
+                    <h3>su-col 纵</h3>
                     <p><code>su-row</code>代表纵容器</p>
                     <table>
                         <tr>
@@ -102,21 +102,25 @@
                         </tr>
 
                     </table>
+                    <h3>--xx-v --xx-d 辅</h3>
+                    <p><code>--sm-v</code>代表sm visible</p>
+                    <p><code>--lg-d</code>代表lg display</p>
+
                     <h3>示例</h3>
                 </div>
 
                 <div su-row>
-                    <div su="primary" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
-                    <div su="light" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
-                    <div su="info" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;</div>
+                    <div su="primary" su-col style="--sm:3;--md:4;--lg:12;">--sm:3;--md:4;--lg:12;--sm-v:hidden</div>
+                    <div su="light" su-col style="--sm:3.2;--md:4.5;--lg:12;">--sm:3.2;--md:4.5;--lg:12;</div>
+                    <div su="info" su-col style="--sm:3.3;--lg:12;">--sm:3.8;--lg:12;</div>
                 </div>
                 <div su-row>
-                    <div su="warning" su-col style="--col:0.22;">--col:0.22;</div>
+                    <div su="warning" su-col style="--col:0.22;--sm-d:none">--col:0.22;--sm-d:none</div>
                     <div su="info" su-col style="--col:0.33;">--col:0.33;</div>
                     <div su="primary" su-col style="--col:0.44;">--col:0.44;</div>
                 </div>
                 <div>
-                    <h3>su-flex</h3>
+                    <h3>su-flex 弹</h3>
                     <ol>
                         <li>j=justify,a=algin,c=content</li>
                         <li>100,001,010,101=start,end,center,between</li>
@@ -130,49 +134,49 @@
                     <li>
                         <code>div su-flex="row !wrap jc-100 ai-100 ac-100"</code>
                         <div su-flex="row !wrap jc-100 ai-100 ac-100">
-                            <div>1-1</div>
-                            <div>1-2</div>
-                            <div>1-3</div>
+                            <div su="warning">1-1</div>
+                            <div su="info">1-2</div>
+                            <div su="primary">1-3</div>
                         </div>
                     </li>
                     <li>
                         <code>div su-flex="-row wrap jc-001 ai-001 ac-001"</code>
                         <div su-flex="-row wrap jc-001 ai-001 ac-001">
-                            <div>2-1</div>
-                            <div>2-2</div>
-                            <div>2-3</div>
+                            <div su="warning">2-1</div>
+                            <div su="info">2-2</div>
+                            <div su="primary">2-3</div>
                         </div>
                     </li>
                     <li>
                         <code>div su-flex="col -wrap jc-010 ai-010 ac-010"</code>
                         <div su-flex="col -wrap jc-010 ai-010 ac-010">
-                            <div>3-1</div>
-                            <div>3-2</div>
-                            <div>3-3</div>
+                            <div su="warning">3-1</div>
+                            <div su="info">3-2</div>
+                            <div su="primary">3-3</div>
                         </div>
                     </li>
                     <li>
                         <code>div su-flex="-col jc-101 ai-baseline ac-101"</code>
                         <div su-flex="-col jc-101 ai-baseline ac-101">
-                            <div>4-1</div>
-                            <div>4-2</div>
-                            <div>4-3</div>
+                            <div su="warning">4-1</div>
+                            <div su="info">4-2</div>
+                            <div su="primary">4-3</div>
                         </div>
                     </li>
                     <li>
                         <code>div su-flex="jc-around ai-stretch ac-around"</code>
                         <div su-flex="jc-around ai-stretch ac-around">
-                            <div>5-1</div>
-                            <div>5-2</div>
-                            <div>5-3</div>
+                            <div su="warning">5-1</div>
+                            <div su="info">5-2</div>
+                            <div su="primary">5-3</div>
                         </div>
                     </li>
                     <li>
                         <code>div su-flex="ac-stretch"</code>
                         <div su-flex="ac-stretch">
-                            <div>6-1</div>
-                            <div>6-2</div>
-                            <div>6-3</div>
+                            <div su="warning">6-1</div>
+                            <div su="info">6-2</div>
+                            <div su="primary">6-3</div>
                         </div>
                     </li>
                 </ol>
@@ -182,48 +186,54 @@
 
             <div>
                 <h1 id="button">按钮</h1>
-
-
-                <button su>Button</button>
-
-                <button su disabled>disabled</button>
-                <button su="light">light</button>
-                <button su="primary">primary</button>
-                <button su="link">link</button>
-                <button su="info">info</button>
-                <button su="success">success</button>
-                <button su="warning">warning</button>
-                <button su="danger">danger</button>
-                <button su="outlined">outlined</button>
-                <button su="rounded">rounded</button>
-                <button su="circle">★</button>
-                <button su="outlined -">
-                    <a href="javascript:">forcus menu</a>
-                    <ul>
-                        <li><a href="javascript:">vsdvsdv</a></li>
-                        <li><a href="javascript:">sdvdsv</a></li>
-                        <li><a href="javascript:">sdvdsv</a></li>
-                        <li><a href="javascript:">sdvdsv</a></li>
-                        <hr>
-                        <li><a href="javascript:">sdvdsv</a></li>
-                    </ul>
-                </button>
-                <button su="outlined -">
-                    <a href="javascript:">(blank)</a>
-                    <ul>
-                        <input checked type="radio" name="ra" value=""/>
-                        <span>(blank)</span>
-                        <input title="A.dada" type="radio" name="ra" value="1"/>
-                        <span>A.da</span>
-                        <input title="B.huha" type="radio" name="ra" value="2"/>
-                        <span >B.la</span>
-                
-                    </ul>
-                </button>
+                <h2>button[su]常规</h2>
+                <div>
+                    <button su>Button</button>
+                    <button su disabled>disabled</button>
+                    <button su="light">light</button>
+                    <button su="primary">primary</button>
+                    <button su="link">link</button>
+                    <button su="info">info</button>
+                    <button su="success">success</button>
+                    <button su="warning">warning</button>
+                    <button su="danger">danger</button>
+                    <button su="outlined">outlined</button>
+                    <button su="rounded">rounded</button>
+                    <button su="circle">★</button>
+                </div>
+                <h2>button[su~="-"]栏(button + a)</h2>
+                <div style="height:150px;">
+                    <button su="outlined -">
+                        <a href="javascript:">forcus menu</a>
+                        <ul>
+                            <li><a href="javascript:">vsdvsdv</a></li>
+                            <li><a href="javascript:">sdvdsv</a></li>
+                            <li><a href="javascript:">sdvdsv</a></li>
+                            <li><a href="javascript:">sdvdsv</a></li>
+                            <hr>
+                            <li><a href="javascript:">sdvdsv</a></li>
+                        </ul>
+                    </button>
+                </div>
+                <h2>button[su~="-"]选(button + input[radio])</h2>
+                <div style="height:150px;">
+                    <button su="outlined -">
+                        <a href="javascript:">(blank)</a>
+                        <ul>
+                            <input checked type="radio" name="ra" value=""/>
+                            <span>(blank)</span>
+                            <input title="A.dada" type="radio" name="ra" value="1"/>
+                            <span>A.da</span>
+                            <input title="B.huha" type="radio" name="ra" value="2"/>
+                            <span >B.la</span>
+                        </ul>
+                    </button>
+                </div>
             </div>
 
             <div>
-                <h1 id="form">表单</h1>
+                <h1 id="form">表单 </h1>
+                <h2>label[su-input]+ input[su][type="checkbox"]多选</h2>
                 <label su-input>
                     <input su type="checkbox"/>
                     <span>check</span>
@@ -240,6 +250,7 @@
                 </label>
                 <br>
 
+                <h2>label[su-input]+ input[su][type="radio"]单选</h2>
                 <label su-input>
                     <input su type="radio" name="ra"/>
                     <span>radio1</span>
@@ -261,17 +272,22 @@
                 </label>
                 <br>
 
+                <h2>label[su-input]+ input[su~="switch"][type="checkbox"]开关</h2>
                 <label su-input>
                     <input su="switch" type="checkbox">
                     <span></span>
                 </label>
                 <br>
+                <h2>input[su~="star"][type="range"]评分</h2>
                 <input su="star" value="1" min="1" max="5" type="range" onchange="this.setAttribute('value', this.value)" />
                 <br>
+                <h2>input[su~="primary"][type="range"]范围</h2>
                 <input su="primary" value="1" min="1" max="100" type="range" />
-                <hr>
+                
+                <h2>progress[su]度</h2>
                 <progress su max="100" value="80"></progress>
                 <br>
+                <h2>progress[su~="star"]分</h2>
                 <progress su="star" max="5" value="2"></progress>
             </div>
 

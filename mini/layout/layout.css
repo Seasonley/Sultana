@@ -34,25 +34,32 @@ div[su-col] {
 
 @media screen and (max-width:480px) {
     div[su-col] {
-        width: auto!important;
+        display: var(--xs-d);
+        visibility: var(--xs-v);
     }
 }
 
 @media screen and (min-width:481px) and (max-width:720px) {
     div[su-col] {
         --col: calc(var(--sm) / 12);
+        display: var(--sm-d);
+        visibility: var(--sm-v);
     }
 }
 
 @media screen and (min-width: 721px) and (max-width:1199px) {
     div[su-col] {
         --col: calc(var(--md) / 12);
+        display: var(--md-d);
+        visibility: var(--md-v);
     }
 }
 
 @media screen and (min-width:1200px) {
     div[su-col] {
         --col: calc(var(--lg) / 12);
+        display: var(--lg-d);
+        visibility: var(--lg-v);
     }
 }
 
