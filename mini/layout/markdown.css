@@ -1,6 +1,5 @@
 /* https://github.com/sindresorhus/github-markdown-css */
 
-
 .markdown-body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -340,7 +339,6 @@
 .markdown-body table {
     display: block;
     width: 100%;
-    overflow: auto
 }
 
 .markdown-body table th {
