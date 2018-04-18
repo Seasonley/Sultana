@@ -39,7 +39,7 @@ div[su-col] {
     }
 }
 
-@media screen and (min-width:481px) and (max-width:720px) {
+@media screen and (min-width:481px) {
     div[su-col] {
         --col: calc(var(--sm) / 12);
         display: var(--sm-d);
@@ -47,7 +47,7 @@ div[su-col] {
     }
 }
 
-@media screen and (min-width: 721px) and (max-width:1199px) {
+@media screen and (min-width: 721px) {
     div[su-col] {
         --col: calc(var(--md) / 12);
         display: var(--md-d);
@@ -55,7 +55,7 @@ div[su-col] {
     }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1201px) {
     div[su-col] {
         --col: calc(var(--lg) / 12);
         display: var(--lg-d);
