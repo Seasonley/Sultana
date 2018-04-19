@@ -77,8 +77,6 @@ button[su~="circle"] {
 /* nav */
 
 button[su~="-"] {
-    display: block;
-    float: left;
     -webkit-appearance: none;
     border: 0;
     outline: none;
@@ -87,7 +85,7 @@ button[su~="-"] {
 
 button[su~="-"] a {
     display: block;
-    text-indent: -15px;
+    /* text-indent: -15px; */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -95,20 +93,16 @@ button[su~="-"] a {
     outline: 0;
     position: relative;
     z-index: 1;
-    padding: 0 1.5rem;
+    padding: 0 0.5em;
     transition: background-color .1s, color .1s;
     color: inherit;
 }
 
 button[su~="-"]>a::after {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    margin: 4px 0 0 .5ch;
-    background: var(--arrow-on) no-repeat;
-    background-size: 100% 100%;
-    transition: transform .2s;
+    content: '▼';
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 0.5em;
+    font-stretch: ultra-condensed;
 }
 
 button[su~="-"]:hover {
@@ -127,7 +121,7 @@ button[su~="-"] hr {
 }
 
 button[su~="-"] a:focus-within::after {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
 }
 
 button[su~="-"] ul {
@@ -221,4 +215,28 @@ button[su~="-"] input:checked+span {
 
 label[su-input] {
     word-wrap: normal;
+}
+
+span[su-group] {
+    letter-spacing: -1em;
+    display: inline-block;
+}
+
+span[su-group] button {
+    min-width: var(--x2);
+    margin: 0;
+    box-shadow: none!important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+
+span[su-group~="-"] button:not(:last-of-type) {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+span[su-group~="-"] button:not(:first-of-type) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
