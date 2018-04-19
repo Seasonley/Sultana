@@ -55,21 +55,47 @@
                 <h3>Sultana 中文文档</h3>
                 <h4>目录</h4>
                 <ol>
-                    <li><a href="#intro">简介</a></li>
-                    <li><a href="#layout">布局</a></li>
-                    <li><a href="#button">按钮</a></li>
-                    <li><a href="#form">表单</a></li>
-                    <li><a href="#widget">可交互控件</a>
+                    <li><a href="#/intro">简介</a></li>
+                    <li><a href="#/layout">布局</a>
                         <ol>
-                            <li><a href="#widget/menu">导航</a></li>
+                            <li><a href="#/layout/row">横</a></li>
+                            <li><a href="#/layout/col">纵</a></li>
+                            <li><a href="#/layout/display">辅</a></li>
+                            <li><a href="#/layout/flex">弹</a></li>
                         </ol>
                     </li>
-                    <li><a href="#others">其他</a>
+                    <li><a href="#/button">按钮</a>
+                        <ol>
+                            <li><a href="#/button/input">普</a></li>
+                            <li><a href="#/button/group">组</a></li>
+                            <li><a href="#/button/menu">栏</a></li>
+                            <li><a href="#/button/select">择</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#form">表单</a>
+                        <ol>
+                            <li><a href="#/form/check">选</a></li>
+                            <li><a href="#/form/switch">闸</a></li>
+                            <li><a href="#/form/star">评</a></li>
+                            <li><a href="#/form/range">尺</a></li>
+                            <li><a href="#/form/range_pro">度</a></li>
+                            <li><a href="#/form/star_pro">分</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#/widget">可交互控件</a>
+                        <ol>
+                            <li><a href="#/widget/tooltip">提示</a></li>
+                            <li><a href="#/widget/menu">导航</a></li>
+                            <li><a href="#/widget/tree">树</a></li>
+                            <li><a href="#/widget/carousel">轮播</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#/others">其他</a>
                 </ol>
             </div>
         </div>
         <div su-col style="--col:0.8" id="main" class="markdown-body">
-            <div id="intro">
+            <div id="/intro">
                 <div>
                     <h1>简介</h1>
                     <p>Sultana是个纯css原生组件样式框架。标签<code>div</code>只用来布局(配合css变量)，所有的元素组件都不会使用它，使得每个标签语义发挥作用。</p>
@@ -77,16 +103,16 @@
 
             </div>
 
-            <div id="layout">
+            <div id="/layout">
                 <div>
                     <h1>布局</h1>
                     <p>Sultana通过css变量打造网格系统。和Bootstrap一样支持12列的布局。为几种不同尺寸的媒体查询范围创建了一个等级。由于是css变量，你也可以使用小数。保证一行的和为12即可。</p>
                     <h2>工作机制</h2>
-                    <h3>横 su-row</h3>
+                    <h3 id="/layout/row">横 su-row</h3>
                     <p>
                         <li><b>横</b>默认占整行。</li>
                     </p>
-                    <h3>纵 su-col</h3>
+                    <h3 id="/layout/col">纵 su-col</h3>
                     <p>
                         <li>
                             <b>横</b><b>纵</b>交融。
@@ -120,7 +146,7 @@
                         </tr>
 
                     </table>
-                    <h3>辅 --xx-v --xx-d </h3>
+                    <h3 id="/layout/display">辅 --xx-v --xx-d </h3>
                     <p><code>--sm-v</code>代表sm visible</p>
                     <p><code>--lg-d</code>代表lg display</p>
 
@@ -149,7 +175,7 @@
                     <div su="primary" su-col style="--col:0.44;">--col:0.44;</div>
                 </div>
                 <div>
-                    <h3>弹 su-flex</h3>
+                    <h3 id="/layout/flex">弹 su-flex</h3>
                     <p>
                         <li>
                             <b>弹</b>的<code>display:flex</code>。
@@ -262,8 +288,8 @@
 
 
             <div>
-                <h1 id="button">按钮</h1>
-                <h2>常规</h2>
+                <h1 id="/button">按钮</h1>
+                <h2 id="/button/input">普</h2>
                 <div>
                     <table>
                         <tr>
@@ -316,7 +342,10 @@
                         </tr>
                     </table>
                 </div>
-                <h2>栏</h2>
+                <h2 id="/button/group">*组</h2>
+
+
+                <h2 id="/button/menu">栏</h2>
                 <textarea name="" id="" cols="80" rows="12">
 <button su="outlined -">
     <a href="javascript:">forcus menu</a>
@@ -343,7 +372,7 @@
                         </ul>
                     </button>
                 </div>
-                <h2>选</h2>
+                <h2 id="/button/select">择</h2>
                 <textarea name="" id="" cols="80" rows="12">
 <button su="outlined -">
     <a href="javascript:">(blank)</a>
@@ -373,12 +402,16 @@
             </div>
 
             <div>
-                <h1 id="form">表单 </h1>
-                <h2>选</h2>
-                <textarea name="" id="" cols="80" rows="5">
+                <h1 id="/form">表单 </h1>
+                <h2 id="/form/check">选</h2>
+                <textarea name="" id="" cols="80" rows="9">
 <label su-input>
     <input su type="checkbox"/>
     <span>check</span>
+</label>
+<label su-input>
+    <input su type="radio" name="ra"/>
+    <span>radio1</span>
 </label>
                 </textarea>
                 <br>
@@ -416,9 +449,9 @@
                     <input su type="radio" disabled checked name="ra"/>
                     <span>radio1</span>
                 </label>
-                <br>
+                <hr>
 
-                <h2>开关</h2>
+                <h2 id="/form/switch">闸</h2>
                 <textarea name="" id="" cols="80" rows="5">
 <label su-input>
     <input su="switch" type="checkbox">
@@ -430,8 +463,8 @@
                     <input su="switch" type="checkbox">
                     <span></span>
                 </label>
-                <br>
-                <h2>评分</h2>
+                <hr>
+                <h2 id="/form/star">评</h2>
                 <textarea name="" id="" cols="80" rows="4">
 <input su="star" value="1" min="1" max="5"
  type="range" 
@@ -439,22 +472,22 @@
                 </textarea>
                 <br>
                 <input su="star" value="1" min="1" max="5" type="range" onchange="this.setAttribute('value', this.value)" />
-                <br>
-                <h2>范围</h2>
+                <hr>
+                <h2 id="/form/range">尺</h2>
                 <textarea name="" id="" cols="80" rows="2">
 <input su="primary" value="1" min="1" max="100" type="range" />
                 </textarea>
                 <br>
-                <input su="primary" value="1" min="1" max="100" type="range" />
-                <br>
-                <h2>度</h2>
+                <input su="range" value="1" min="1" max="100" type="range" />
+                <hr>
+                <h2 id="/form/range_pro">度</h2>
                 <textarea name="" id="" cols="80" rows="2">
-<progress su max="100" value="100"></progress>
+<progress su max="100" value="80"></progress>
                 </textarea>
                 <br>
-                <progress su max="100" value="100"></progress>
-                <br>
-                <h2>分</h2>
+                <progress su max="100" value="80"></progress>
+                <hr>
+                <h2 id="/form/star_pro">分</h2>
                 <textarea name="" id="" cols="80" rows="2">
 <progress su="star" max="5" value="2"></progress>
                 </textarea>
@@ -462,9 +495,9 @@
                 <progress su="star" max="5" value="2"></progress>
             </div>
 
-            <h1 id="widget">可交互控件</h1>
+            <h1 id="/widget">可交互控件</h1>
             <div>
-                <h2 id="widget/tooltip">冒泡提示</h2>
+                <h2 id="/widget/tooltip">提示</h2>
                 <textarea name="" id="" cols="80" rows="2">
 <button su su-hint="bottom-right" aria-label="tooltip"> bottom-right</button>
                 </textarea>
@@ -485,8 +518,8 @@
 
 
             <div>
-                <h2 id="widget/tooltip">导航</h2>
-                <textarea cols="80" rows="40">
+                <h2 id="/widget/menu">导航</h2>
+                <textarea cols="80" rows="20">
 <aside su="|" style="width:300px;">
     <p>General</p>
     <details>
@@ -566,8 +599,8 @@
                 </aside>
             </div>
             <div>
-                <h2 id="widget/tooltip">树</h2>
-                <textarea cols="80" rows="50">
+                <h2 id="/widget/tree">树</h2>
+                <textarea cols="80" rows="20">
 <aside su="+" style="width:300px;">
     <details open>
         <summary>root</summary>
@@ -627,7 +660,8 @@
                         </details>
                     </details>
                 </aside>
-                <textarea cols="80" rows="50">
+                <hr>
+                <textarea cols="80" rows="20">
 <aside su="v" style="width:300px;">
     <details open>
         <summary>root</summary>
@@ -658,7 +692,6 @@
     </details>
 </aside>
                 </textarea>
-                <hr>
                 <aside su="v" style="width:300px;">
                     <details open>
                         <summary>root</summary>
@@ -690,7 +723,33 @@
                 </aside>
             </div>
             <div>
-                <h2 id="widget/tooltip">轮播</h2>
+                <h2 id="/widget/carousel">轮播</h2>
+                <textarea cols="80" rows="20">
+<aside su="." style="--w:400px;--h:300px;--p:20px;">
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <ul>
+        <li style="background:gray;">
+            <a>111</a>
+        </li>
+        <li style="background:orange;">
+            <a>222</a>
+        </li>
+        <li style="background:teal;">
+            <a>333</a>
+        </li>
+        <li style="background:blue;">
+            <a>444</a>
+        </li>
+        <li style="background:black;">
+            <a>555</a>
+        </li>
+    </ul>
+</aside>
+                </textarea>
                 <div su-flex="row" style="height: 300px;line-height: 300px;">
                     <aside su="." style="--w:400px;--h:300px;--p:20px;">
                         <button></button>
