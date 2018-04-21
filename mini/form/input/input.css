@@ -11,7 +11,7 @@ input[su][type="radio"]+span {
     height: 1em;
     margin: 0.2em 0.1em;
     border: 2px solid #555;
-    border-radius: 2px;
+    border-radius: var(--rad);
     padding: 0px;
     display: inline-block;
     position: relative;
@@ -205,4 +205,57 @@ input[type="text"][su] {
 
 input[type="file"][su] {
     width: 12em;
+}
+
+label[su-group] {
+    border-radius: var(--rad);
+    border: 1px solid var(--Gray);
+    overflow: hidden;
+    display: inline-block;
+}
+
+label[su-group] input {
+    border: 0 !important;
+    background: transparent;
+    word-spacing: 0;
+}
+
+label[su-group] button {
+    box-shadow: none;
+}
+
+ ::-webkit-input-placeholder {
+    color: var(--Gray);
+}
+
+textarea[su] {
+    resize: none;
+}
+
+label[su-group] textarea[su] {
+    border: 0;
+    display: block;
+}
+
+label[su-group] textarea[su]+span {
+    display: block;
+    float: right;
+    clear: both;
+    color: var(--Gray);
+}
+
+label[su-group~="warning"] {
+    border-color: var(--Warning);
+}
+
+label[su-group~="info"] {
+    border-color: var(--Info);
+}
+
+label[su-group~="danger"] {
+    border-color: var(--Danger);
+}
+
+label[su-group~="success"] {
+    border-color: var(--Success);
 }

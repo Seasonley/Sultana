@@ -11,7 +11,7 @@ button[su],
     outline: none;
     text-decoration: none;
     position: relative;
-    border-radius: 2px;
+    border-radius: var(--rad);
     box-shadow: 0 1px 3px var(--Shadow);
     transition: box-shadow .5s ease-out;
     cursor: pointer;
@@ -262,4 +262,20 @@ span[su-group~="|"] button:not(:first-of-type) {
 span[su-group] span {
     text-align: center;
     width: 100%;
+}
+
+ul[su-group] {
+    border-radius: var(--rad);
+    border: 1px solid var(--Gray);
+    padding: 0;
+    margin: 0;
+}
+
+ul[su-group] li {
+    padding: 0;
+    margin: 0;
+}
+
+ul[su-group] li:not(:last-child) {
+    border-bottom: 1px solid var(--Gray);
 }

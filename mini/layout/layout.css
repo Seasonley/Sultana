@@ -13,7 +13,8 @@ body {
     --x7: calc(7 * var(--x1));
     --x8: calc(8 * var(--x1));
     --x9: calc(9 * var(--x1));
-    --h: 2;
+    --pw: 0.25rem;
+    --rad: 2px;
 }
 
 div[su-row] {

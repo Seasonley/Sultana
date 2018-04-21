@@ -54,7 +54,7 @@ aside[su~="|"] p {
 }
 
 aside[su~="|"] summary {
-    border-radius: 2px;
+    border-radius: var(--rad);
     color: #4a4a4a;
     display: block;
     padding: 0.5em 0.75em;
@@ -73,7 +73,7 @@ aside[su~="|"] details:hover summary {
 aside[su~="|"] details[open] summary {
     background-color: var(--Primary);
     color: var(--Primary_i);
-    border-radius: 4px;
+    border-radius: var(--rad);
 }
 
 aside[su~="|"] details+ul {
