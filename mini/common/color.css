@@ -60,7 +60,9 @@ body {
     --color: var(--Danger_i)!important;
 }
 
-div {
+div,
+sub,
+sup {
     background-color: var(--background-color);
     color: var(--color);
 }
