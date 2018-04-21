@@ -202,3 +202,7 @@ input[type="text"][su] {
     height: var(--x2);
     line-height: var(--x2);
 }
+
+input[type="file"][su] {
+    width: 12em;
+}
