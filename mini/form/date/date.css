@@ -1,0 +1,233 @@
+input[su][type="date"] {
+    -webkit-appearance: none;
+}
+
+label[su-date]>div {
+    display: none;
+    width: calc(7 * var(--x2));
+    position: absolute;
+    border: 1px solid var(--Gray);
+    background: var(--White);
+    z-index: 1;
+    box-sizing: content-box;
+    padding: var(--pw);
+    border-radius: var(--rad);
+    background-position-x: var(--pw);
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAoAQMAAAAWg4CFAAAAA3NCSVQICAjb4U/gAAAABlBMVEUAAAD///+l2Z/dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFnRFWHRDcmVhdGlvbiBUaW1lADA0LzIyLzE4LZvh6wAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAACrSURBVCiRY/iPDj4w0EvoO5j8wYwk9IAfRP7+jSR07z+G0D6iNL7D1PgOUyMWVQ3sGEL/IA4mSuj/Y/oFIYrQAfk/jBDi9/9/zAihSfeBxM//fxgRGifd/7///9//f36iCTXIowr9YQZSIKEfIEGgMdPu/7f+/w3FrDb5/9X/n9cja+y/DxR6b48sNB8kdH4+VKhBHkz8qwaKQ81qkAfZcR9I7D+PrJE24QUAcZOhjwB94xYAAAAASUVORK5CYII=);
+    margin-top: -1px;
+}
+
+label[su-date] input[su][type="date"]:hover+div,
+label[su-date]>div:hover {
+    display: block;
+}
+
+label[su-date]>div input[type="number"] {
+    width: var(--x3);
+    box-sizing: border-box;
+    display: block;
+    clear: none;
+    float: left;
+    border: 0;
+    margin-bottom: var(--x2);
+    text-align: right;
+    cursor: pointer;
+}
+
+label[su-date]>div input[type="number"]:first-of-type {
+    margin-left: var(--x2);
+    width: var(--x5);
+    margin-right: var(--x2);
+}
+
+label[su-date]>div input[type="radio"] {
+    -webkit-appearance: none;
+    display: block;
+    float: left;
+    width: var(--x2);
+    height: var(--x2);
+    padding: 0;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: var(--rad);
+}
+
+label[su-date]>div input[type="radio"]:hover {
+    filter: brightness(0.8);
+}
+
+label[su-date]>div input[type="radio"] {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmwAAAAoAgMAAAA+rU7lAAAAA3NCSVQICAjb4U/gAAAACVBMVEUzMzMAgID///9aF949AAAACXBIWXMAAAsSAAALEgHS3X78AAAAFnRFWHRDcmVhdGlvbiBUaW1lADA0LzIyLzE4LZvh6wAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAATJSURBVFiF7ZRPa+NIEMVl2JPvAybHnGR9i8xpmXO6wT4nYaxvER+GMKf1gAS+JQKJ7v6UW7/qP5a9y8L6slmwEl5eddVTv3RVqwqf96n+awP/8Ny8XfeIt4m/D8BXwAMG+IPItIKvuWSCTkgm4gnJhGRCMiGZkKS6B1SvwARo+BXwgAFE8YAi1T3g4hWY8LbHQt0IPOHjHR9fgKWE/lESYSXg6pZaoXskeyR7JHskeyR7JHsksU4kUrVqBPayxboWtn5i7Z0dvwBLCdePTaqrRfHUCntq9+LN3+sBYsE12RvEN3qMLet4k0V/79rG34sElTBJCbwTkvWASKSukQSSULcC63t9qbCGTRo24aVhDTRsUhPXUuJQOFHIuQ3n3t5KpOsuzLyFARyQDEGZA94IYxbmYCIZojd1NJx7e8veat0N3cwbIIrszRc3v5eoI/wAVuHk7S57803ygWTwmu0IP4BV+kd8LQqPN99wrPjwjSg8R+brjvADWBFiiz1cOHlzjNoipP/Ec33db01IWQ3rC28iGZAMSAYkA5KU1VAk7js7tQNbiMK1C5go3E5K3HdRpKyGoliwx2Lm7RBST50rjEEJv3JPw+LC2yGknjpXWIu3X7mnSA4oDigOKA7UHVAkJooDigOKAwrHSc97usxD9/54lxgvDeFHyOyyp8s8dEgii9kfpU7WlrAlfIliqWsolrOsKBKLE3qnE5q8xTtJYrzw9rN48+d3QUN1NF54+1m8MWKi0MlM48atbESRmNQJ+xky87Pbk7ylO1kuhPZUO/kt5O7qJXTr7C3dyXIhtKfayW8hd9fxs25injJ+G/2bmCgcmzg2SQX1+uyeuuoOKB8NZVWbmw1zi5BnPHoTyeCq8tFQVrW52TCRSFUFSFG1qu4AQhcyq1qBZWYrFIFE3OrTPjdv1z03b9c9lfm8z83bdc//wVsLeMACAdgShU5wZzLEwn8haalrY70yD1ggAKJoUbSxeMcr2/jeKr2l7/Ie27LRWDYia3vdTOgOSWIWtgUCIJIdkphF0nfC+m5XmIVtgQCIou9Dl7J9jwthVl4h3o56Cuqty966AqzZDiA+Qo9IjuSPpI9IjpqNwJrWqaRH3B31fTBeiDfDegKb63opsTArCvG2Off2UiKT+3XytgE3SDZGmQVeCGMWZmEi2URv6mhz7u0l2+p1N2vOvAGiOPcGmbJJuykt7s3J23juDTapGUATW6A3xdt47g025THqNaHH2JvkjT2sOXmzZbD7PG9x1DYl7C+8qS2ffVCzQZKyGvaznQQs4HWiACmxKFJWQ1F4FH7mbVdmyxZmsjftqfEX3nYm9dTawkrHtadIdih2rKUrZFmzhZkuZVHsUFhOet7TMTd2G/I9sLr4nNtpLudtzI3d6mmZLjt/LnUCI4xVgVH3kRDFmLIsiyLVzSe0yieTvdmZt654G//qTQcsOpp564o39SOTb3X8OVfb6T6shS4zzT6TFXvd33ozuZPm1NPu5C0ndISSN5M7aU497bqzc2PErH7SNnnc1EUKhInCsgkLXSro+7N7asMI5FsRWfkAx7vgTZ7x6E0kGxvKRyOU7FjugufFAZCiMIURILQmM4UxswmFgcW78Gmfm7frnpu3654/AXMzmLhXK6yRAAAAAElFTkSuQmCC);
+}
+
+label[su-date]>div input[type="radio"][value="01"] {
+    background-position-x: 0;
+    clear: left;
+}
+
+label[su-date]>div input[type="radio"][value="02"] {
+    background-position-x: calc(-1 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="03"] {
+    background-position-x: calc(-2 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="04"] {
+    background-position-x: calc(-3 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="05"] {
+    background-position-x: calc(-4 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="06"] {
+    background-position-x: calc(-5 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="07"] {
+    background-position-x: calc(-6 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="08"] {
+    background-position-x: calc(-7 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="09"] {
+    background-position-x: calc(-8 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="10"] {
+    background-position-x: calc(-9 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="11"] {
+    background-position-x: calc(-10 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="12"] {
+    background-position-x: calc(-11 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="13"] {
+    background-position-x: calc(-12 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="14"] {
+    background-position-x: calc(-13 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="15"] {
+    background-position-x: calc(-14 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="16"] {
+    background-position-x: calc(-15 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="17"] {
+    background-position-x: calc(-16 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="18"] {
+    background-position-x: calc(-17 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="19"] {
+    background-position-x: calc(-18 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="20"] {
+    background-position-x: calc(-19 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="21"] {
+    background-position-x: calc(-20 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="22"] {
+    background-position-x: calc(-21 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="23"] {
+    background-position-x: calc(-22 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="24"] {
+    background-position-x: calc(-23 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="25"] {
+    background-position-x: calc(-24 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="26"] {
+    background-position-x: calc(-25 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="27"] {
+    background-position-x: calc(-26 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="28"] {
+    background-position-x: calc(-27 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="29"] {
+    background-position-x: calc(-28 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="30"] {
+    background-position-x: calc(-29 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"][value="31"] {
+    background-position-x: calc(-30 * var(--x2))
+}
+
+label[su-date]>div input[type="radio"]:checked {
+    background-position-y: calc(-31 * var(--x2))
+}
+
+label[su-date] input[type="number"][value="2"]+div input[type="radio"]:last-of-type,
+label[su-date] input[type="number"][value="4"]+div input[type="radio"]:last-of-type,
+label[su-date] input[type="number"][value="6"]+div input[type="radio"]:last-of-type,
+label[su-date] input[type="number"][value="9"]+div input[type="radio"]:last-of-type,
+label[su-date] input[type="number"][value="11"]+div input[type="radio"]:last-of-type,
+label[su-date] input[type="number"][value="2"]+div input[type="radio"][value="30"],
+label[su-date] input[type="number"][value="2"]+div input[type="radio"][value="29"] {
+    display: none
+}
+
+label[su-date] input[name="ymd"][data-leap="true"]+div input[type="radio"][value="29"] {
+    display: block
+}
+
+label[su-date] input[name="ymd"][data-day="1"]+div input[type="radio"][value="01"] {
+    margin-left: calc(0 * var(--x2))
+}
+
+label[su-date] input[name="ymd"][data-day="2"]+div input[type="radio"][value="01"] {
+    margin-left: calc(1 * var(--x2))
+}
+
+label[su-date] input[name="ymd"][data-day="3"]+div input[type="radio"][value="01"] {
+    margin-left: calc(2 * var(--x2))
+}
+
+label[su-date] input[name="ymd"][data-day="4"]+div input[type="radio"][value="01"] {
+    margin-left: calc(3 * var(--x2))
+}
+
+label[su-date] input[name="ymd"][data-day="5"]+div input[type="radio"][value="01"] {
+    margin-left: calc(4 * var(--x2))
+}
+
+label[su-date] input[name="ymd"][data-day="6"]+div input[type="radio"][value="01"] {
+    margin-left: calc(5 * var(--x2))
+}
+
+label[su-date] input[name="ymd"][data-day="0"]+div input[type="radio"][value="01"] {
+    margin-left: calc(6 * var(--x2))
+}
