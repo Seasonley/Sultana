@@ -19,12 +19,15 @@ label[su-date]>div {
 }
 
 label[su-date] input[su][type="date"]:hover+div,
-label[su-date]>div:hover {
+label[su-date]>div:hover,
+label[su-date]:hover>div {
     display: block;
 }
 
 label[su-date]>div input[type="number"] {
     width: var(--x3);
+    font-size: 14px;
+    line-height: 14px;
     box-sizing: border-box;
     display: block;
     clear: none;

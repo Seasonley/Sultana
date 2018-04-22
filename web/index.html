@@ -78,6 +78,7 @@
                             <li><a href="#/form/switch">闸</a></li>
                             <li><a href="#/form/star">评</a></li>
                             <li><a href="#/form/range">尺</a></li>
+                            <li><a href="#/form/date">日</a></li>
                             <li><a href="#/form/range_pro">度</a></li>
                             <li><a href="#/form/star_pro">分</a></li>
                         </ol>
@@ -536,6 +537,54 @@
                 </textarea>
                 <br>
                 <input su="range" value="1" min="1" max="100" type="range" />
+                <hr>
+                <h2 id="/form/date">日</h2>
+                <form oninput="ymd.value=y.value+'-'+('0'+m.value).slice(-2)+'-'+d.value;ymd.dataset.leap=(y.value % 4 == 0) && (y.value % 100 != 0 || y.value % 400 == 0);ymd.dataset.day=new Date(y.value+'-'+('0'+m.value).slice(-2)+'-1').getDay()" onclick="ymd.value=y.value+'-'+('0'+m.value).slice(-2)+'-'+d.value"
+                    onmouseover="ymd.dataset.day=new Date(y.value+'-'+('0'+m.value).slice(-2)+'-1').getDay()">
+                    <label su-date>
+            <input su type="date" name="ymd" readonly>
+            <div>
+                <input name="y" type="number" min="1970" max="3000" value="2000" onchange="this.setAttribute('value', this.value)">
+                <input name="m" type="number" min="1" max="12" value="1" onchange="this.setAttribute('value', this.value)">
+                <div>
+                    <input name="d" type="radio" value="01" checked>
+                    <input name="d" type="radio" value="02">
+                    <input name="d" type="radio" value="03">
+                    <input name="d" type="radio" value="04">
+                    <input name="d" type="radio" value="05">
+                    <input name="d" type="radio" value="06">
+                    <input name="d" type="radio" value="07">
+                    <input name="d" type="radio" value="08">
+                    <input name="d" type="radio" value="09">
+                    <input name="d" type="radio" value="10">
+                    <input name="d" type="radio" value="11">
+                    <input name="d" type="radio" value="12">
+                    <input name="d" type="radio" value="13">
+                    <input name="d" type="radio" value="14">
+                    <input name="d" type="radio" value="15">
+                    <input name="d" type="radio" value="16">
+                    <input name="d" type="radio" value="17">
+                    <input name="d" type="radio" value="18">
+                    <input name="d" type="radio" value="19">
+                    <input name="d" type="radio" value="20">
+                    <input name="d" type="radio" value="21">
+                    <input name="d" type="radio" value="22">
+                    <input name="d" type="radio" value="23">
+                    <input name="d" type="radio" value="24">
+                    <input name="d" type="radio" value="25">
+                    <input name="d" type="radio" value="26">
+                    <input name="d" type="radio" value="27">
+                    <input name="d" type="radio" value="28">
+                    <input name="d" type="radio" value="29">
+                    <input name="d" type="radio" value="30">
+                    <input name="d" type="radio" value="31">
+                </div>
+            </div>
+    </label>
+
+
+                    <button su>submit</button>
+                </form>
                 <hr>
                 <h2 id="/form/range_pro">度</h2>
                 <textarea name="" id="" cols="80" rows="2">
