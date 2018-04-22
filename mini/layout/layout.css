@@ -14,7 +14,7 @@ body {
     --x8: calc(8 * var(--x1));
     --x9: calc(9 * var(--x1));
     --pw: 0.25rem;
-    --rad: 2px;
+    --rad: 4px;
 }
 
 div[su-row] {
