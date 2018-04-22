@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="../../../web/sultana.css">
-<form oninput="ymd.value=y.value+'-'+('0'+m.value).slice(-2)+'-'+d.value;ymd.dataset.leap=(y.value % 4 == 0) && (y.value % 100 != 0 || y.value % 400 == 0);ymd.dataset.day=new Date(y.value+'-'+('0'+m.value).slice(-2)+'-1').getDay()" onclick="ymd.value=y.value+'-'+('0'+m.value).slice(-2)+'-'+d.value">
+<form oninput="ymd.value=y.value+'-'+('0'+m.value).slice(-2)+'-'+d.value;ymd.dataset.leap=(y.value % 4 == 0) && (y.value % 100 != 0 || y.value % 400 == 0);ymd.dataset.day=new Date(y.value+'-'+('0'+m.value).slice(-2)+'-1').getDay()" onclick="ymd.value=y.value+'-'+('0'+m.value).slice(-2)+'-'+d.value"
+    onmouseover="ymd.dataset.day=new Date(y.value+'-'+('0'+m.value).slice(-2)+'-1').getDay()">
     <label su-date>
             <input su type="date" name="ymd" readonly>
             <div>
