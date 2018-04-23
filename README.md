@@ -28,7 +28,7 @@ Sultana是个纯css原生组件样式框架。标签`<div>`只用来布局(配�
     * [x] panel 折叠板
     * [x] carousel 轮播
     * [x] scroll indicator滚动指示器
-    * [ ] tabs 选项卡
+    * [x] tabs 选项卡
     * [ ] navbar 伸缩导航
 * [ ] others 其他
     * [x] label 标签

@@ -156,3 +156,45 @@ aside[su~="v"] details summary[title$=".pdf"]:before {
     background-repeat: no-repeat;
     transform: rotate(0deg);
 }
+
+dl[su-tab] {
+    --tab-w: auto;
+}
+
+dl[su-tab] dd {
+    width: var(--tab-w);
+    margin-right: -1px;
+    border: 1px solid var(--Light);
+    border-bottom: 0;
+    float: left;
+}
+
+dl[su-tab]>dd>label {
+    display: block;
+    line-height: var(--x2);
+    text-align: center;
+    cursor: pointer;
+    background: var(--Light);
+}
+
+dl[su-tab]>dd>input,
+dl[su-tab]>dd>div {
+    position: absolute;
+    left: -100vw;
+}
+
+dl[su-tab]>dd>input:checked~div {
+    border: 1px solid var(--Light);
+    background: var(--White);
+    left: 0;
+    right: 0;
+}
+
+dl[su-tab]>dd>input:checked~label {
+    background-color: var(--Primary);
+    border-color: var(--Primary);
+    color: var(--Primary_i);
+    border-bottom: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+}
