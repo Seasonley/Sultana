@@ -1,5 +1,21 @@
-tabel[su] td,
-tabel[su] th {
+table[su] td,
+table[su] th {
     border: 1px solid gray;
     border-collapse: collapse;
+    padding: 0 1em;
+    font-weight: normal;
+}
+
+table[su] th,
+table[su] tfoot {
+    background-color: var(--Light);
+}
+
+table[su~="zebra"] tr:nth-child(even) {
+    background: #F6F6F6;
+}
+
+table[su~="zebra"] tr:hover,
+table[su~="zebra"] tr:focus-within {
+    background: rgb(227, 236, 239);
 }
