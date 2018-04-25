@@ -1,0 +1,5 @@
+tabel[su] td,
+tabel[su] th {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
