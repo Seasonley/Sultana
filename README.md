@@ -21,8 +21,8 @@ Sultana是个纯css原生组件样式框架。标签`<div>`只用来布局(配�
     * [x] textarea 段落输入框
     * [x] file 文件
     * [x] progress 进度条
-    * [x] date 日期
 * [x] widget 可交互控件
+    * [x] tooltip 提示冒泡
     * [x] menu 导航
     * [x] tree 树
     * [x] panel 折叠板
@@ -30,10 +30,10 @@ Sultana是个纯css原生组件样式框架。标签`<div>`只用来布局(配�
     * [x] scroll indicator滚动指示器
     * [x] tabs 选项卡
     * [x] navbar 伸缩导航
-* [ ] others 其他
+* [x] others 其他
     * [x] label 标签
-    * [x] tooltip 提示冒泡
-    * [ ] table 表格
+    * [x] table 表格
+    * [x] date 日期
 
 
 ## Quick Start
