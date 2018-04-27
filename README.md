@@ -33,7 +33,7 @@ Sultana是个纯css原生组件样式框架。标签`<div>`只用来布局(配�
 * [x] others 其他
     * [x] label 标签
     * [x] table 表格
-    * [x] date 日期
+    * [x] datepicker 日期
 
 
 ## Quick Start
